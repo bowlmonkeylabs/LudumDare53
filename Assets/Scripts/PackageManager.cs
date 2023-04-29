@@ -4,6 +4,7 @@ using System.Linq;
 using BML.ScriptableObjectCore.Scripts.Events;
 using BML.ScriptableObjectCore.Scripts.SceneReferences;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 
 [Serializable]
@@ -44,19 +45,18 @@ namespace DefaultNamespace
             _packageSpawnTimer = new Timer(_packageSpawnTime);
             //add back for drone delivery
             // _packageDeliverTimer = new Timer(_packageDeliveryTime);
+            UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
+            Debug.Log(System.DateTime.Now.Millisecond);
         }
 
         void Start() {
-            foreach(Transform houseTransform in _houseContainer.Value) {
-                var house = houseTransform.GetComponent<House>();
-                if(house == null) {
-                    continue;
-                }
-                _packagesAtEachHouse.Add(new PackageHouse {
-                    spawnPoint = house.PackageSpawnPoint,
-                    packages = new List<Package>()
+            _houseContainer.Value.GetComponentsInChildren<House>()
+                .ForEach(h => {
+                    _packagesAtEachHouse.Add(new PackageHouse {
+                            spawnPoint = h.PackageSpawnPoint,
+                            packages = new List<Package>()
+                        }); 
                 });
-            }
 
             _packageSpawnTimer.Start();
         }
@@ -77,7 +77,7 @@ namespace DefaultNamespace
                 return;
             }
 
-            PackageHouse houseToSpawnAt = _packagesAtEachHouse.Find(ph => ph.packages.Count < _packageLimitPerHouse);
+            PackageHouse houseToSpawnAt = _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value).FirstOrDefault(ph => ph.packages.Count < _packageLimitPerHouse);
 
             if(!houseToSpawnAt.Equals(default(PackageHouse))) {
                 GameObject packageGameObject = Instantiate<GameObject>(_packagePrefab, houseToSpawnAt.spawnPoint.transform.position, Quaternion.identity, _packageContainer.Value);
@@ -100,47 +100,23 @@ namespace DefaultNamespace
         }
 
         private void TryAssignPirateToPackage() {
-            Pirate pirate = null;
-            foreach(Transform pirateTransform in _piratesContainer.Value) {
-                pirate = pirateTransform.GetComponent<Pirate>();
-
-                if(pirate.IsPatrolling) {
-                    break;
-                } else {
-                    pirate = null;
-                }
-            }
+            Pirate pirate = _piratesContainer.Value.GetComponentsInChildren<Pirate>()
+                .Where(p => p.IsPatrolling)
+                .OrderBy(p => UnityEngine.Random.value)
+                .FirstOrDefault();
 
             if(pirate != null) {
-                Package package = null;
-                _packagesAtEachHouse.ForEach(ph => {
-                    package = ph.packages.Find(p => !p.PackageAssigned);
+                _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value)
+                    .ForEach(ph => {
+                        var package = ph.packages.Find(p => !p.PackageAssigned);
 
-                    if(package != null) {
-                        Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
-                        pirate.SetTargetPackage(package.transform.position);
-                        package.PackageAssigned = true;
-                        return;
-                    }
-                });
-//                 var packageHouse = _packagesAtEachHouse.Find(ph => ph.packages.Count > 0);
-                
-//                 if(!packageHouse.Equals(default(PackageHouse))) {
-//                     // Debug.Log("Found assignable pirate: " + pirate.gameObject.name);
-//                     Debug.Log("Found assignable house: " + packageHouse.spawnPoint.transform.position);
-//                     //add back for drone delivery 
-//                     //&& p.PackageDelivered
-//                     Debug.Log(packageHouse.packages.Where(p => !p.PackageAssigned).ToList().Count);
-//                     Package package = packageHouse.packages.Find(p => !p.PackageAssigned);
-// // Debug.Log(package != null);
-// // package = packageHouse.packages.Select(p => !p.PackageAssigned).ToList().Count > 0 ? packageHouse.packages.Select(p => !p.PackageAssigned).ToArray()[0] : null;
-// // Debug.Log(package != null);
-//                     if(package != null) {
-//                         Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
-//                         pirate.SetTargetPackage(package.transform.position);
-//                         package.PackageAssigned = true;
-//                     }
-//                 }
+                        if(package != null) {
+                            Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
+                            pirate.SetTargetPackage(package.transform.position);
+                            package.PackageAssigned = true;
+                            return;
+                        }
+                    });
             }
         }
     }
