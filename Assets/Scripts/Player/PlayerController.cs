@@ -10,6 +10,7 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField, FoldoutGroup("References")] private Transform _mainCamera;
+        [SerializeField, FoldoutGroup("References")] private Transform _firePoint;
 
         [SerializeField, FoldoutGroup("Interact")] private float _interactDistance = 5f;
         [SerializeField, FoldoutGroup("Interact")] private float _interactCastRadius = .25f;
@@ -42,7 +43,7 @@ namespace Player
             if (lastFireNetTime + _netGunCooldown > Time.time)
                 return;
 
-            GameObject net = Instantiate(_netPrefab, _mainCamera.position, _mainCamera.rotation, _netContainer);
+            GameObject net = Instantiate(_netPrefab, _firePoint.position, _mainCamera.rotation, _netContainer);
             net.GetComponent<Rigidbody>().AddForce(_netGunForce * _mainCamera.forward);
             lastFireNetTime = Time.time;
         }

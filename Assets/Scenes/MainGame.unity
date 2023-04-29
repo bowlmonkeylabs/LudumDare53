@@ -445,10 +445,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1820717315, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: _netContainer
-      value: 
-      objectReference: {fileID: 1722698596}
     - target: {fileID: 3115398940015444965, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: starterAssetsInputs
       value: 
