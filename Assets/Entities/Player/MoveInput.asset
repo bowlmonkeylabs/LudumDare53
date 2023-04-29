@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5be68029433444586fe71b7a1236e9, type: 3}
-  m_Name: Setting_SensitivityMouse
+  m_Script: {fileID: 11500000, guid: 63f0178e69357de4eb51eda480c31621, type: 3}
+  m_Name: MoveInput
   m_EditorClassIdentifier: 
   EnableDebugOnUpdate: 0
   Description: 
-  defaultValue: 10
-  runtimeValue: 10
+  defaultValue: {x: 0, y: 0}
+  runtimeValue: {x: 0, y: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 

@@ -240,9 +240,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3501969030653650419, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 3115398940015444965, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: starterAssetsInputs
+      value: 
+      objectReference: {fileID: 3088997818583584210, guid: a1b71ee8786c690499247f9012696481, type: 3}
+    - target: {fileID: 3999611413342684039, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 76.4549
       objectReference: {fileID: 0}
     - target: {fileID: 5387726686921504454, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_RootOrder
@@ -288,46 +292,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_MoveAction
-      value: 
-      objectReference: {fileID: 5613614185135771730, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_PointAction
-      value: 
-      objectReference: {fileID: -9120158073422320316, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_CancelAction
-      value: 
-      objectReference: {fileID: -1652949167470907362, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_SubmitAction
-      value: 
-      objectReference: {fileID: 5278480284063373710, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_LeftClickAction
-      value: 
-      objectReference: {fileID: -6745019240869512132, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_RightClickAction
-      value: 
-      objectReference: {fileID: -7772487283596792352, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_MiddleClickAction
-      value: 
-      objectReference: {fileID: 3622574154735180180, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_ScrollWheelAction
-      value: 
-      objectReference: {fileID: -4950278455131685041, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_TrackedDevicePositionAction
-      value: 
-      objectReference: {fileID: 3506654260451525277, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
-    - target: {fileID: 6475013242806403986, guid: a1b71ee8786c690499247f9012696481, type: 3}
-      propertyPath: m_TrackedDeviceOrientationAction
-      value: 
-      objectReference: {fileID: 642709029856841603, guid: 51be94397a8b7184b8f439212be4a3d6, type: 3}
+    - target: {fileID: 6277089998618863790, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: field of view
+      value: 76.4549
+      objectReference: {fileID: 0}
     - target: {fileID: 8237029089349002326, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_Name
       value: Player
