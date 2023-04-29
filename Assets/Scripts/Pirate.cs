@@ -26,6 +26,12 @@ namespace DefaultNamespace
             TakingPackageToVan
         }
 
+        public bool IsPatrolling {
+            get {
+                return pirateState == PirateState.Patrolling;
+            }
+        }
+
         private void Update()
         {
             switch (pirateState)
