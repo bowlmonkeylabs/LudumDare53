@@ -42,7 +42,7 @@ namespace Player
         {
             if (lastFireNetTime + _netGunCooldown > Time.time)
                 return;
-
+            
             GameObject net = Instantiate(_netPrefab, _firePoint.position, _mainCamera.rotation, _netContainer);
             net.GetComponent<Rigidbody>().AddForce(_netGunForce * _mainCamera.forward);
             lastFireNetTime = Time.time;

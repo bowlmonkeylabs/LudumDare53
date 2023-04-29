@@ -635,7 +635,7 @@ MonoBehaviour:
   _netPrefab: {fileID: 5580472451043599047, guid: 85a1a6af5d7d63c4d8730154d42ac40a, type: 3}
   _netContainer: {fileID: 0}
   _netGunCooldown: 0.3
-  _netGunForce: 1000
+  _netGunForce: 2000
 --- !u!114 &8153703344567043914
 MonoBehaviour:
   m_ObjectHideFlags: 0
