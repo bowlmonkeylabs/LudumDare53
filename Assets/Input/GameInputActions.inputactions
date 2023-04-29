@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Primary",
+                    "type": "Value",
+                    "id": "7c431c78-9666-401c-9993-e02fb2308e5e",
+                    "expectedControlType": "Digital",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Look",
                     "type": "Value",
                     "id": "2aa7deea-ce04-4e3f-b504-3a26da5efe72",
@@ -162,7 +171,7 @@
                     "id": "c1f7a91b-d0fd-4a62-997e-7fb9b69bf235",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "StickDeadzone",
+                    "processors": "StickDeadzone,InvertVector2(invertX=false)",
                     "groups": "Gamepad",
                     "action": "Look",
                     "isComposite": false,
@@ -187,6 +196,28 @@
                     "processors": "InvertVector2(invertX=false)",
                     "groups": "Keyboard&Mouse",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4039d266-c071-4124-afe6-e5a6749dc79e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "10c3bd7f-4d52-4bc9-bebd-305767defcc4",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Primary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
