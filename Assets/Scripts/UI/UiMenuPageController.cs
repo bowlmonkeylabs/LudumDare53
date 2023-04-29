@@ -174,7 +174,7 @@ namespace BML.Scripts.UI
 
         private void UpdateLastSelected()
         {
-            lastSelected = eventSystem.currentSelectedGameObject;
+            lastSelected = eventSystem?.currentSelectedGameObject;
             // Debug.Log($"{this?.name} | UpdateLastSelected | {lastSelected?.name}");
         }
 

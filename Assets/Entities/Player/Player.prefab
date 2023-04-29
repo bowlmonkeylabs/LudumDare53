@@ -586,6 +586,7 @@ MonoBehaviour:
   lookScaleGamepad: {x: 12.5, y: 12.5}
   jump: 0
   sprint: 0
+  isPaused: {fileID: 11400000, guid: 3975cff0b522fb945a1344e66029a983, type: 2}
   playerInput: {fileID: 1616805505780896162}
   _mouseInput:
     UseConstant: 0

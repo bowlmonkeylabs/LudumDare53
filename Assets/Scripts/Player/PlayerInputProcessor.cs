@@ -1,4 +1,5 @@
-﻿using BML.ScriptableObjectCore.Scripts.Variables;
+﻿using System;
+using BML.ScriptableObjectCore.Scripts.Variables;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,8 @@ namespace Player
 	    public Vector2 lookScaleGamepad = new Vector2(12.5f, 12.5f);
         public bool jump;
         public bool sprint;
+
+        public BoolVariable isPaused;
         
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Vector2Reference _mouseInput;
@@ -34,6 +37,19 @@ namespace Player
 			
         }
 
+        #region Unity lifecycle
+
+        private void OnEnable()
+        {
+	        isPaused.Subscribe(UpdateInputState);
+        }
+        
+        private void OnDisable()
+        {
+	        isPaused.Unsubscribe(UpdateInputState);
+        }
+
+        #endregion
 
         #region Input Callbacks
 
@@ -57,6 +73,15 @@ namespace Player
         public void OnSprint(InputValue value)
         {
 	        SprintInput(value.isPressed);
+        }
+
+        public void OnPause(InputValue value)
+        {
+	        if (isPaused != null)
+	        {
+		        isPaused.Value = !isPaused.Value;
+		        UpdateInputState();
+	        }
         }
 
         #endregion
@@ -92,6 +117,12 @@ namespace Player
         private void OnApplicationFocus(bool hasFocus)
         {
 	        SetCursorState(cursorLocked);
+        }
+
+        private void UpdateInputState()
+        {
+	        SetCursorState(!isPaused.Value);
+	        playerInput.SwitchCurrentActionMap(isPaused.Value ? "UI" : "Player");
         }
 
         private void SetCursorState(bool newState)
