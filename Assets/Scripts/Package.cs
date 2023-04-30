@@ -1,21 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Package : MonoBehaviour
 {
-    // public bool PackageDelivered = false;
-    public bool PackageAssigned = false;
-    public bool PackageAwayFromHouse = false;
-    public House house;
+    [ReadOnly] public bool AssignedToPirate = false;
+    [ReadOnly] public bool OnStoop = true;
+    [ReadOnly] public House house;
+    [ReadOnly] public float TimeOnStoop;
 
     public void TryReturn()
     {
-        if (!PackageAwayFromHouse)
+        if (OnStoop)
             return;
 
         transform.position = house.PackageSpawnPoint.position;
-        PackageAwayFromHouse = false;
+        OnStoop = true;
+    }
+
+    public void FixedUpdate() {
+        if(OnStoop) {
+            TimeOnStoop += Time.deltaTime;
+        }
     }
 }

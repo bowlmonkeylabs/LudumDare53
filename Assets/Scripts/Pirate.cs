@@ -88,6 +88,7 @@ namespace DefaultNamespace
         {
             pirateState = PirateState.TakingPackageToVan;
 
+            _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = this.transform;
             
             //TODO: Get this van position dynamically
@@ -105,8 +106,8 @@ namespace DefaultNamespace
             if (_grabbablePackage == null)
                 return;
 
-            _grabbablePackage.PackageAssigned = false;
-            _grabbablePackage.PackageAwayFromHouse = true;
+            _grabbablePackage.AssignedToPirate = false;
+            _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = _packageContainer.Value;
         }
     }

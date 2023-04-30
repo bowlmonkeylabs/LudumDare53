@@ -7,17 +7,6 @@ using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
-[Serializable]
-public struct PackageHouse {
-    public House house;
-    public Transform spawnPoint;
-    public List<Package> packages;
-}
-
-// public struct PackageDelivery {
-//     public GameObject spawnPoint;
-//     public Package package;
-// }
 namespace DefaultNamespace
 {
     public class PackageManager : MonoBehaviour
@@ -37,8 +26,9 @@ namespace DefaultNamespace
         // [SerializeField] private float _packageDeliveryTime = 1;
 
         [SerializeField] private DynamicGameEvent _packageReturnedToVan;
+        // [SerializeField] private DynamicGameEvent _packageReturnedToVan;
 
-        [SerializeField, ReadOnly] private List<PackageHouse> _packagesAtEachHouse = new List<PackageHouse>();
+        [SerializeField, ReadOnly] private List<House> _packagesAtEachHouse = new List<House>();
 
         private Timer _packageSpawnTimer;
         //add back for drone delivery
@@ -53,23 +43,17 @@ namespace DefaultNamespace
 
         void Start() {
             _houseContainer.Value.GetComponentsInChildren<House>()
-                .ForEach(h => {
-                    _packagesAtEachHouse.Add(new PackageHouse {
-                            house = h,
-                            spawnPoint = h.PackageSpawnPoint,
-                            packages = new List<Package>()
-                        }); 
-                });
+                .ForEach(h => _packagesAtEachHouse.Add(h));
 
             _packageSpawnTimer.Start();
         }
 
         void OnEnable() {
-            _packageReturnedToVan.Subscribe(RemovePackageReturnedToVan);
+            _packageReturnedToVan.Subscribe(RemovePackage);
         }
 
         void OnDisable() {
-            _packageReturnedToVan.Unsubscribe(RemovePackageReturnedToVan);
+            _packageReturnedToVan.Unsubscribe(RemovePackage);
         }
 
         void Update() {
@@ -88,14 +72,14 @@ namespace DefaultNamespace
                 return;
             }
 
-            PackageHouse houseToSpawnAt = _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value).FirstOrDefault(ph => ph.packages.Count < _packageLimitPerHouse);
+            House houseToSpawnAt = _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value).FirstOrDefault(ph => ph.packages.Count < _packageLimitPerHouse);
 
-            if(!houseToSpawnAt.Equals(default(PackageHouse))) {
-                GameObject packageGameObject = Instantiate<GameObject>(_packagePrefab, houseToSpawnAt.spawnPoint.position, Quaternion.identity, _packageContainer.Value);
+            if(houseToSpawnAt != null) {
+                GameObject packageGameObject = Instantiate<GameObject>(_packagePrefab, houseToSpawnAt.PackageSpawnPoint.position, Quaternion.identity, _packageContainer.Value);
 
                 Package package = packageGameObject.GetComponent<Package>();
 
-                package.house = houseToSpawnAt.house;
+                package.house = houseToSpawnAt;
 
                 houseToSpawnAt.packages.Add(package);
 
@@ -121,25 +105,21 @@ namespace DefaultNamespace
             if(pirate != null) {
                 _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value)
                     .ForEach(ph => {
-                        var package = ph.packages.Find(p => !p.PackageAssigned);
+                        var package = ph.packages.Find(p => !p.AssignedToPirate);
 
                         if(package != null) {
                             Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
                             pirate.SetTargetPackage(package);
-                            package.PackageAssigned = true;
+                            package.AssignedToPirate = true;
                             return;
                         }
                     });
             }
         }
 
-        private void RemovePackageReturnedToVan(object prev, object packageObj) {
+        private void RemovePackage(object prev, object packageObj) {
             Package package = (Package) packageObj;
-            _packagesAtEachHouse.Find(ph => ph.house.Equals(package.house)).packages.Remove(package);
+            _packagesAtEachHouse.Find(house => house.Equals(package.house)).packages.Remove(package);
         }
-    }
-
-    public class DataObjects {
-
     }
 }
