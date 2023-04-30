@@ -238,7 +238,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
+  _maxTimeOnStoop: 20
+  _positiveScore: 5
   PackageSpawnPoint: {fileID: 9063823370433345357}
+  packages: []
 --- !u!1 &4010691042464485171
 GameObject:
   m_ObjectHideFlags: 0

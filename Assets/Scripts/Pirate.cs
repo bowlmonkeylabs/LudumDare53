@@ -3,7 +3,7 @@ using BML.Scripts.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
-using BML.ScriptableObjectCore.Scripts.Events;
+using BML.ScriptableObjectCore.Scripts.Variables;
 using BML.ScriptableObjectCore.Scripts.SceneReferences;
 using Sirenix.Utilities;
 
@@ -14,8 +14,12 @@ namespace DefaultNamespace
         [SerializeField] private Patrol _patrol;
         [SerializeField] private NavMeshAgent _agent;
         [SerializeField] private float _captureTime = 3f;
+        [SerializeField] private IntVariable _score;
         [SerializeField] private TransformSceneReference _packageContainer;
         [SerializeField] private TransformSceneReference vanSceneReference;
+        [SerializeField] private int _positiveScoreOnDropPackage = 5;
+        [SerializeField] private int _negativeScoreOnGrabPackage = 5;
+        [SerializeField] private int _negativeScoreOnTakeToVan = 10;
 
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
 
@@ -95,14 +99,16 @@ namespace DefaultNamespace
             _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = this.transform;
             
-            //TODO: Get this van position dynamically
             _agent.SetDestination(vanSceneReference.Value.position);
+
+            _score.Value -= _negativeScoreOnGrabPackage;
         }
 
         private void CapturePackage()
         {
             //TODO: Add logic for capture here
             _grabbablePackage.DoDestroy();
+            _score.Value -= _negativeScoreOnTakeToVan;
             Destroy(this.gameObject);
         }
 
@@ -114,6 +120,7 @@ namespace DefaultNamespace
             _grabbablePackage.AssignedToPirate = null;
             _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = _packageContainer.Value;
+            _score.Value += _positiveScoreOnDropPackage;
         }
     }
 }
