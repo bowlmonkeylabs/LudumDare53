@@ -1,4 +1,5 @@
 ﻿using System;
+using BML.ScriptableObjectCore.Scripts.Variables;
 using BML.Scripts;
 using BML.Scripts.UI;
 using Sirenix.OdinInspector;
@@ -19,12 +20,25 @@ namespace Player
 
         [SerializeField, FoldoutGroup("NetGun")] private bool _hasNetGun;
         [SerializeField, FoldoutGroup("NetGun")] private GameObject _netPrefab;
+        [SerializeField, FoldoutGroup("NetGun")] private GameObject netGunUIContainer;
         [SerializeField, FoldoutGroup("NetGun")] private Transform _netContainer;
         [SerializeField, FoldoutGroup("NetGun")] private float _netGunCooldown = .3f;
         [SerializeField, FoldoutGroup("NetGun")] private float _netGunForce = 1000f;
         [SerializeField, FoldoutGroup("NetGun")] private UnityEvent _onFireNet;
 
         private float lastFireNetTime = Mathf.NegativeInfinity;
+
+        #region Unity Lifecycle
+
+        private void Update()
+        {
+            if (_hasNetGun && !netGunUIContainer.activeSelf)
+                netGunUIContainer.SetActive(true);
+            if (!_hasNetGun && netGunUIContainer.activeSelf)
+                netGunUIContainer.SetActive(false);
+        }
+
+        #endregion
 
         #region Input Callback
 
