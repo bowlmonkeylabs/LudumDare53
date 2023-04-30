@@ -168,18 +168,6 @@ MonoBehaviour:
   OnNet:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5147647193182048766}
-        m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
-        m_MethodName: PlayFeedbacks
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
         m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.IntVariable,
           ScriptableObjectSystem
@@ -189,6 +177,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: -20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5147647193182048766}
+        m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
+        m_MethodName: PlayFeedbacks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -352,21 +352,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2443709314384484613}
     - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
-      propertyPath: FeedbacksList.Array.data[4].TargetGameObject
-      value: 
-      objectReference: {fileID: 2443709314384484613}
-    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
       propertyPath: FeedbacksList.Array.data[0].AnimatePositionTarget
       value: 
       objectReference: {fileID: 2443709314384484613}
-    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
-      propertyPath: FeedbacksList.Array.data[2].AnimatePositionTarget
-      value: 
-      objectReference: {fileID: 2443709314384484613}
-    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
-      propertyPath: FeedbacksList.Array.data[0].SquashAndStretchTarget
-      value: 
-      objectReference: {fileID: 2443709314384484635}
     - target: {fileID: 4764683988551685686, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -404,11 +404,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7985185874719010290}
     - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
+      propertyPath: FeedbacksList.Array.data[3].TargetGameObject
+      value: 
+      objectReference: {fileID: 7985185874719010290}
+    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
       propertyPath: FeedbacksList.Array.data[4].TargetGameObject
       value: 
       objectReference: {fileID: 7985185874719010290}
     - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
       propertyPath: FeedbacksList.Array.data[0].AnimatePositionTarget
+      value: 
+      objectReference: {fileID: 7985185874719010290}
+    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
+      propertyPath: FeedbacksList.Array.data[1].AnimatePositionTarget
       value: 
       objectReference: {fileID: 7985185874719010290}
     - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
@@ -419,6 +427,14 @@ PrefabInstance:
       propertyPath: FeedbacksList.Array.data[0].SquashAndStretchTarget
       value: 
       objectReference: {fileID: 7985185874719010284}
+    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7985185874719010287}
+    - target: {fileID: 4134635752521237960, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
     - target: {fileID: 4764683988551685686, guid: 48d27bf5daf42044db71d6f197fd3991, type: 3}
       propertyPath: m_RootOrder
       value: 0

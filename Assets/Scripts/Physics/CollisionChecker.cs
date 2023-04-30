@@ -13,14 +13,17 @@ namespace BML.Scripts
         [SerializeField] private LayerMask CollisionMask;
 
         [SerializeField] private bool ignoreTriggers = true;
+        [SerializeField] private bool oneCollisionPerObject = true;
 
         [SerializeField] private UnityEvent<List<Collider>> HandleCollisions;
 
         private Vector3 previousPosition;
+        private List<GameObject> hitObjects = new List<GameObject>();
 
         private void OnEnable()
         {
             previousPosition = transform.position;
+            hitObjects = new List<GameObject>();
         }
 
         private void Update()
@@ -43,7 +46,11 @@ namespace BML.Scripts
 
             foreach (var hit in hits)
             {
+                if (hitObjects.Contains(hit.collider.gameObject))
+                    continue;
+                
                 colliderList.Add(hit.collider);
+                hitObjects.Add(hit.collider.gameObject);
             }
 
             if (hits.Length > 0)
