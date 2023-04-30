@@ -20,9 +20,9 @@ namespace DefaultNamespace
             OnStoop = true;
         }
 
-        public void DoDestroy()
+        public void DoDestroy(bool unassignFromPirate = true)
         {
-            if(AssignedToPirate != null) {
+            if(AssignedToPirate != null && unassignFromPirate) {
                 AssignedToPirate.UnSetTargetPackage(this);
             }
             house.packages.Remove(this);

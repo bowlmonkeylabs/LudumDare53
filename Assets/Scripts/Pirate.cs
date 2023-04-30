@@ -107,7 +107,7 @@ namespace DefaultNamespace
         private void CapturePackage()
         {
             //TODO: Add logic for capture here
-            _grabbablePackage.DoDestroy();
+            _grabbablePackage.DoDestroy(false);
             _score.Value -= _negativeScoreOnTakeToVan;
             Destroy(this.gameObject);
         }

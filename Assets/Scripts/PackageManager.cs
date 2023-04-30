@@ -89,11 +89,11 @@ namespace DefaultNamespace
 
         private void TryAssignPirateToPackage() {
             Pirate pirate = _piratesContainer.Value.GetComponentsInChildren<Pirate>()
-                .Where(p => p.IsPatrolling)
+                .Where(p => p.IsPatrolling && !p.SafeIsUnityNull())
                 .OrderBy(p => UnityEngine.Random.value)
                 .FirstOrDefault();
 
-            if(!pirate.SafeIsUnityNull()) {
+            if(pirate != null) {
                 _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value)
                     .ForEach(ph => {
                         var package = ph.packages.Find(p => !p.AssignedToPirate);
