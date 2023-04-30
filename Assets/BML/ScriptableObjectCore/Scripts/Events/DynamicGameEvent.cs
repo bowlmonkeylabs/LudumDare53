@@ -59,6 +59,17 @@ namespace BML.ScriptableObjectCore.Scripts.Events
         
             previous = obj;
         }
+
+        public void Raise(string val)
+        {
+            OnUpdate?.Invoke(previous, val);
+        
+            //Broadcast to monobehavior listeners
+            for(int i = listeners.Count -1; i >= 0; i--)
+                listeners[i].OnEventRaised(val);
+        
+            previous = val;
+        }
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using BML.ScriptableObjectCore.Scripts.Events;
 using BML.ScriptableObjectCore.Scripts.Variables;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,6 +22,7 @@ namespace Player
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Vector2Reference _mouseInput;
         [SerializeField] private Vector2Reference _moveInput;
+        [SerializeField] private DynamicGameEvent _switchInputStateEvent;
 
         [Header("Movement Settings")]
         public bool analogMovement;
@@ -34,7 +36,6 @@ namespace Player
         private bool IsCurrentDeviceMouse
         {
 	        get => playerInput.currentControlScheme == "Keyboard&Mouse";
-			
         }
 
         #region Unity lifecycle
@@ -42,11 +43,13 @@ namespace Player
         private void OnEnable()
         {
 	        isPaused.Subscribe(UpdateInputState);
+	        _switchInputStateEvent.Subscribe(SwitchInputState);
         }
         
         private void OnDisable()
         {
 	        isPaused.Unsubscribe(UpdateInputState);
+	        _switchInputStateEvent.Unsubscribe(SwitchInputState);
         }
 
         #endregion
@@ -123,6 +126,20 @@ namespace Player
         {
 	        SetCursorState(!isPaused.Value);
 	        playerInput.SwitchCurrentActionMap(isPaused.Value ? "UI" : "Player");
+        }
+
+        private void SwitchInputState(object prev, object curr)
+        {
+	        SwitchInputState((string) curr);
+        }
+
+        private void SwitchInputState(string inputState)
+        {
+	        if (inputState != "UI" && inputState != "Player")
+		        Debug.LogError($"Invalid input state: {inputState}");
+	        
+	        SetCursorState(inputState == "Player");
+	        playerInput.SwitchCurrentActionMap(inputState);
         }
 
         private void SetCursorState(bool newState)

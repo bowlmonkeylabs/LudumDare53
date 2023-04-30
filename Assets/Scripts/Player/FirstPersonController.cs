@@ -23,6 +23,8 @@ namespace Player
 		[Tooltip("Curve for analog look input smoothing")]
 		[SerializeField] AnimationCurve AnalogMovementCurve;
 
+		[SerializeField] private BoolReference _isPlayerInputDisabled;
+
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
@@ -103,6 +105,9 @@ namespace Player
 
 		private void Update()
 		{
+			if (_isPlayerInputDisabled.Value)
+				return;
+			
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
@@ -110,6 +115,9 @@ namespace Player
 
 		private void LateUpdate()
 		{
+			if (_isPlayerInputDisabled.Value)
+				return;
+			
 			CameraRotation();
 		}
 

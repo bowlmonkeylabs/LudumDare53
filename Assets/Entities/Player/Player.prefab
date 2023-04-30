@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: field of view
-      value: 58.71551
+      value: 58.69365
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
@@ -602,6 +602,7 @@ MonoBehaviour:
     InstancePath: IntermediateProperties
     ConstantValue: {x: 0, y: 0}
     Variable: {fileID: 11400000, guid: cef4a99cce2c9814aa080630a1be2acc, type: 2}
+  _switchInputStateEvent: {fileID: 11400000, guid: 69a62aec1cd9a3945bcdbda398738445, type: 2}
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -630,7 +631,7 @@ MonoBehaviour:
   _interactCastRadius: 0.25
   _interactMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1537
   _hasNetGun: 1
   _netPrefab: {fileID: 5580472451043599047, guid: 85a1a6af5d7d63c4d8730154d42ac40a, type: 3}
   _netContainer: {fileID: 0}
@@ -693,6 +694,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _isPlayerInputDisabled:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 8caf97b21f719964b80b106b467825a4, type: 2}
   JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.1
