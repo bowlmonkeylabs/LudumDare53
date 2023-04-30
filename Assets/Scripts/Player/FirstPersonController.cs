@@ -1,4 +1,6 @@
 ﻿using BML.ScriptableObjectCore.Scripts.Variables;
+using MoreMountains.Feedbacks;
+using PlasticPipe.PlasticProtocol.Server;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +14,12 @@ namespace Player
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
+		public float SprintMaxAmount = 10f;
+		public float SprintDecayRate = 3f;
+		public float SprintRegenRate = 6.0f;
+		public float SprintRegenDelay= 1f;
+		public MMF_Player SprintStartFeedback;
+		public MMF_Player SprintStopFeedback;
 		[Tooltip("Rotation speed of the character")]
 		public float RotationSpeed = 1.0f;
 		[Tooltip("Acceleration and deceleration")]
@@ -54,6 +62,10 @@ namespace Player
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
+		
+		//Sprint
+		private float currentSprintAmount;
+		private float lastSprintTime = Mathf.NegativeInfinity;
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
@@ -74,6 +86,7 @@ namespace Player
 		private PlayerInputProcessor _input;
 		private GameObject _mainCamera;
 		private float previouRotSpeed = 0f;
+		private bool sprinting = false;
 
 		private const float _threshold = 0.01f;
 
@@ -94,6 +107,7 @@ namespace Player
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<PlayerInputProcessor>();
 			_playerInput = GetComponent<PlayerInput>();
+			currentSprintAmount = SprintMaxAmount;
 		}
 
 		private void Start()
@@ -190,10 +204,35 @@ namespace Player
 
 		private void Move()
 		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			if (_input.sprint && currentSprintAmount >= SprintDecayRate)
+			{
+				lastSprintTime = Time.time;
+				currentSprintAmount -= SprintDecayRate * Time.deltaTime;
+				if (!sprinting)
+					SprintStartFeedback.PlayFeedbacks();
+				sprinting = true;
+			}
+			else
+			{
+				if (sprinting)
+				{
+					SprintStopFeedback.PlayFeedbacks();
+				}
+					
+				sprinting = false;
+			}
 
-			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+			if (lastSprintTime + SprintRegenDelay < Time.time)
+			{
+				currentSprintAmount += SprintRegenDelay * Time.deltaTime;
+			}
+
+			currentSprintAmount = Mathf.Min(currentSprintAmount, SprintMaxAmount);
+
+			// set target speed based on move speed, sprint speed and if sprint is pressed
+			float targetSpeed = sprinting ? SprintSpeed : MoveSpeed;
+
+				// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is no input, set the target speed to 0
