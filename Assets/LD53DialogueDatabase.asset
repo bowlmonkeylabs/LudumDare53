@@ -1218,7 +1218,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Z Dialog 2
+        value: New Recruit! ATENSHUN! Are you listening to me?! We've got important,
+          dangerous work to do. The enemy is at the gates! We must stop these Porch
+          Pirates, or all is lost. Take them down with your Net-a-Tron 3000, and
+          the Ymazon drones will take care of the rest. Oh and err, try not to shoot
+          civilians. WHAT ARE YOU STILL DOING HERE! GET MOVING!
         type: 0
         typeString: 
       - title: Sequence
