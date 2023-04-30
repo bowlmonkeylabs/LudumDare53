@@ -25,7 +25,6 @@ namespace DefaultNamespace
         //add back for drone delivery
         // [SerializeField] private float _packageDeliveryTime = 1;
 
-        [SerializeField] private DynamicGameEvent _packageReturnedToVan;
         // [SerializeField] private DynamicGameEvent _packageReturnedToVan;
 
         [SerializeField, ReadOnly] private List<House> _packagesAtEachHouse = new List<House>();
@@ -46,14 +45,6 @@ namespace DefaultNamespace
                 .ForEach(h => _packagesAtEachHouse.Add(h));
 
             _packageSpawnTimer.Start();
-        }
-
-        void OnEnable() {
-            _packageReturnedToVan.Subscribe(RemovePackage);
-        }
-
-        void OnDisable() {
-            _packageReturnedToVan.Unsubscribe(RemovePackage);
         }
 
         void Update() {
@@ -110,16 +101,11 @@ namespace DefaultNamespace
                         if(package != null) {
                             Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
                             pirate.SetTargetPackage(package);
-                            package.AssignedToPirate = true;
+                            package.AssignedToPirate = pirate;
                             return;
                         }
                     });
             }
-        }
-
-        private void RemovePackage(object prev, object packageObj) {
-            Package package = (Package) packageObj;
-            _packagesAtEachHouse.Find(house => house.Equals(package.house)).packages.Remove(package);
         }
     }
 }

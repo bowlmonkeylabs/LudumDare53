@@ -2,25 +2,37 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Package : MonoBehaviour
+namespace DefaultNamespace
 {
-    [ReadOnly] public bool AssignedToPirate = false;
-    [ReadOnly] public bool OnStoop = true;
-    [ReadOnly] public House house;
-    [ReadOnly] public float TimeOnStoop;
-
-    public void TryReturn()
+    public class Package : MonoBehaviour
     {
-        if (OnStoop)
-            return;
+        [ReadOnly] public Pirate AssignedToPirate = null;
+        [ReadOnly] public bool OnStoop = true;
+        [ReadOnly] public House house;
+        [ReadOnly] public float TimeOnStoop;
 
-        transform.position = house.PackageSpawnPoint.position;
-        OnStoop = true;
-    }
+        public void TryReturn()
+        {
+            if (OnStoop)
+                return;
 
-    public void FixedUpdate() {
-        if(OnStoop) {
-            TimeOnStoop += Time.deltaTime;
+            transform.position = house.PackageSpawnPoint.position;
+            OnStoop = true;
+        }
+
+        public void DoDestroy()
+        {
+            if(AssignedToPirate != null) {
+                AssignedToPirate.UnSetTargetPackage(this);
+            }
+            house.packages.Remove(this);
+            Destroy(this.gameObject);
+        }
+
+        public void FixedUpdate() {
+            if(OnStoop) {
+                TimeOnStoop += Time.deltaTime;
+            }
         }
     }
 }

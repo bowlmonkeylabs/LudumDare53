@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using BML.ScriptableObjectCore.Scripts.Events;
 using BML.ScriptableObjectCore.Scripts.SceneReferences;
+using Sirenix.Utilities;
 
 namespace DefaultNamespace
 {
@@ -13,13 +14,11 @@ namespace DefaultNamespace
         [SerializeField] private Patrol _patrol;
         [SerializeField] private NavMeshAgent _agent;
         [SerializeField] private float _captureTime = 3f;
-        [SerializeField] private DynamicGameEvent _packageReturnedToVan;
         [SerializeField] private TransformSceneReference _packageContainer;
+        [SerializeField] private TransformSceneReference vanSceneReference;
 
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
 
-        private Vector3 destination;
-        private Vector3 vanPosition;
         private float arriveAtPackageTime = Mathf.NegativeInfinity;
         private Package _grabbablePackage;
 
@@ -66,7 +65,7 @@ namespace DefaultNamespace
 
         private bool HasReachedDestination()
         {
-            return Vector3.Distance(transform.position, destination) < .5f;
+            return Vector3.Distance(transform.position, _agent.destination) < .5f;
         }
 
         public void SetTargetPackage(Package package)
@@ -74,8 +73,13 @@ namespace DefaultNamespace
             pirateState = PirateState.WalkingToPackage;
             _grabbablePackage = package;
             _patrol.enabled = false;
-            destination = _grabbablePackage.transform.position;
-            _agent.SetDestination(destination);
+            _agent.SetDestination(_grabbablePackage.transform.position);
+        }
+
+        public void UnSetTargetPackage(Package package)
+        {
+            pirateState = PirateState.Patrolling;
+            _grabbablePackage = null;
         }
 
         private void ArriveAtPackage()
@@ -92,13 +96,14 @@ namespace DefaultNamespace
             _grabbablePackage.transform.parent = this.transform;
             
             //TODO: Get this van position dynamically
-            _agent.SetDestination(vanPosition);
+            _agent.SetDestination(vanSceneReference.Value.position);
         }
 
         private void CapturePackage()
         {
             //TODO: Add logic for capture here
-            _packageReturnedToVan.Raise(_grabbablePackage.GetComponent<Package>());
+            _grabbablePackage.DoDestroy();
+            Destroy(this.gameObject);
         }
 
         public void DropPackage()
@@ -106,7 +111,7 @@ namespace DefaultNamespace
             if (_grabbablePackage == null)
                 return;
 
-            _grabbablePackage.AssignedToPirate = false;
+            _grabbablePackage.AssignedToPirate = null;
             _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = _packageContainer.Value;
         }

@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a362419e36a5f4aa1fe1476aec8426, type: 3}
-  m_Name: PackageBroughtToVanDynamicGameEvent
+  m_Script: {fileID: 11500000, guid: ee3f20523483ae140947ceba712c88aa, type: 3}
+  m_Name: VanSceneReference
   m_EditorClassIdentifier: 
   Description: 
+  reference: {fileID: 0}
