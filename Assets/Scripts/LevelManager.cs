@@ -10,7 +10,6 @@ namespace DefaultNamespace
         [SerializeField] private TimerReference _levelTimer;
         [SerializeField] private IntReference _levelScore;
         [SerializeField] private GameScore _gameScore;
-
         [SerializeField] private UnityEvent _onTimerEnd;
 
         #region Unity lifecycle
