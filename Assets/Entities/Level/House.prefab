@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
   _maxTimeOnStoop: 20
-  _positiveScore: 5
+  _positiveScoreOnHomeownerGrabPackage: 30
   PackageSpawnPoint: {fileID: 9063823370433345357}
   packages: []
 --- !u!1 &4010691042464485171
