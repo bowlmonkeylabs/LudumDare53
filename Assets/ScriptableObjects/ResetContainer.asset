@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ed833749c622c4fa5ae62fe9dce430, type: 3}
+  m_Name: ResetContainer
+  m_EditorClassIdentifier: 
+  FolderPath: 
+  IncludeSubdirectories: 0
+  Description: 
+  TriggerVariables: []
+  BoolVariables: []
+  IntVariables:
+  - {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
+  FloatVariables: []
+  Vector2Variables: []
+  Vector3Variables: []
+  QuaternionVariables: []
+  TimerVariables:
+  - {fileID: 11400000, guid: cbdadae1d7bfd8c418fc7eec0232020e, type: 2}
+  FunctionVariables: []
