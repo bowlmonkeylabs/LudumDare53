@@ -14,10 +14,16 @@ namespace DefaultNamespace
         }
 
         public List<LevelScore> LevelScores;
+        public LevelScore BossScore;
 
         public void RecordScore(int score)
         {
             LevelScores.Add(new LevelScore { Score = score });
+        }
+
+        public void RecordBossScore(int score)
+        {
+            BossScore = new LevelScore { Score = score };
         }
 
         public void Reset()

@@ -10,6 +10,7 @@ namespace DefaultNamespace
         [SerializeField] private TimerReference _levelTimer;
         [SerializeField] private IntReference _levelScore;
         [SerializeField] private GameScore _gameScore;
+        [SerializeField] private bool _isBossLevel = false;
         [SerializeField] private UnityEvent _onTimerEnd;
 
         #region Unity lifecycle
@@ -38,7 +39,12 @@ namespace DefaultNamespace
 
         private void RecordLevelScore()
         {
-            _gameScore.RecordScore(_levelScore.Value);
+            if(_isBossLevel) {
+                _gameScore.RecordBossScore(_levelScore.Value);
+            } else {
+                _gameScore.RecordScore(_levelScore.Value);
+            }
+            
             _onTimerEnd.Invoke();
         }
     }
