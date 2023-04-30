@@ -1,6 +1,7 @@
 using System;
 using BML.ScriptableObjectCore.Scripts.Variables;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
@@ -9,6 +10,8 @@ namespace DefaultNamespace
         [SerializeField] private TimerReference _levelTimer;
         [SerializeField] private IntReference _levelScore;
         [SerializeField] private GameScore _gameScore;
+
+        [SerializeField] private UnityEvent _onTimerEnd;
 
         #region Unity lifecycle
 
@@ -37,6 +40,7 @@ namespace DefaultNamespace
         private void RecordLevelScore()
         {
             _gameScore.RecordScore(_levelScore.Value);
+            _onTimerEnd.Invoke();
         }
     }
 }
