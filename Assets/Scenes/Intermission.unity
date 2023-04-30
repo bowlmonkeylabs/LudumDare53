@@ -354,6 +354,10 @@ PrefabInstance:
       value: 76.4549
       objectReference: {fileID: 0}
     - target: {fileID: 7806481543781320553, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: _hasNetGun
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806481543781320553, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: _netContainer
       value: 
       objectReference: {fileID: 1722698596}
