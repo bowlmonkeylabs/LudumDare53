@@ -59,9 +59,169 @@ Transform:
   m_Children:
   - {fileID: 2768181194038632810}
   - {fileID: 6530953766937393117}
+  - {fileID: 1582140884588187166}
   m_Father: {fileID: 5387726686921504454}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2949373418615237157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582140884588187166}
+  - component: {fileID: 6381376983198705400}
+  - component: {fileID: 5419745849789340067}
+  m_Layer: 6
+  m_Name: FireNetFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1582140884588187166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949373418615237157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1416131769932870031}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6381376983198705400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949373418615237157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks: []
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  DurationMultiplier: 1
+  DisplayFullDurationDetails: 0
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+  FeedbacksList:
+  - id: 0
+  KeepPlayModeChanges: 0
+  PerformanceMode: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: MMF_CinemachineImpulseSource, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.Cinemachine}
+      data:
+        Active: 1
+        UniqueID: -1127997305
+        Label: Cinemachine Impulse Source
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 6381376983198705400}
+        DebugActive: 0
+        ImpulseSource: {fileID: 5419745849789340067}
+        Velocity: {x: 1, y: 1, z: 1}
+        ClearImpulseOnStop: 0
+--- !u!114 &5419745849789340067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949373418615237157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 10
+    m_FrequencyGain: 0.25
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.1
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 1000
+    m_PropagationSpeed: 343
 --- !u!1 &3607563941624184434
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: field of view
-      value: 40.43891
+      value: 76.4549
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
@@ -564,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 6378811482670541042}
     - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 40.43891
+      value: 76.4549
       objectReference: {fileID: 0}
     - target: {fileID: 8762286024517199033, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_Layer
@@ -578,11 +738,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8762286023885395077, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
   m_PrefabInstance: {fileID: 5627421274330142460}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3999611413342684038 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
-  m_PrefabInstance: {fileID: 5627421274330142460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3999611413342684039 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
@@ -594,6 +749,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3999611413342684038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+  m_PrefabInstance: {fileID: 5627421274330142460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2842511248132560875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +808,21 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: a0dd7973c053207418e10c8f444ee980, type: 2}
   _useHorizontalFov: 1
+--- !u!114 &8312089772131623307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999611413342683769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1001 &7053923628708624378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -731,14 +906,9 @@ PrefabInstance:
     - {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
     - {fileID: 5420857361349278248, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
---- !u!1 &1616805505780896174 stripped
+--- !u!1 &6378811482670541045 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 7053923628708624378}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2106519856387394324 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4135013735270702863, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 7053923628708624378}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1616805505780896162 stripped
@@ -752,9 +922,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6378811482670541045 stripped
+--- !u!4 &2106519856387394324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 7053923628708624378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1616805505780896174 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4135013735270702863, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 7053923628708624378}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6378811482670541042 stripped
@@ -832,6 +1007,21 @@ MonoBehaviour:
   _netContainer: {fileID: 0}
   _netGunCooldown: 0.3
   _netGunForce: 2000
+  _onFireNet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6381376983198705400}
+        m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
+        m_MethodName: PlayFeedbacks
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8153703344567043914
 MonoBehaviour:
   m_ObjectHideFlags: 0

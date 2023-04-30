@@ -3,6 +3,7 @@ using BML.Scripts;
 using BML.Scripts.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace Player
@@ -21,6 +22,7 @@ namespace Player
         [SerializeField, FoldoutGroup("NetGun")] private Transform _netContainer;
         [SerializeField, FoldoutGroup("NetGun")] private float _netGunCooldown = .3f;
         [SerializeField, FoldoutGroup("NetGun")] private float _netGunForce = 1000f;
+        [SerializeField, FoldoutGroup("NetGun")] private UnityEvent _onFireNet;
 
         private float lastFireNetTime = Mathf.NegativeInfinity;
 
@@ -46,6 +48,7 @@ namespace Player
             GameObject net = Instantiate(_netPrefab, _firePoint.position, _mainCamera.rotation, _netContainer);
             net.GetComponent<Rigidbody>().AddForce(_netGunForce * _mainCamera.forward);
             lastFireNetTime = Time.time;
+            _onFireNet.Invoke();
         }
 
         private void TryInteract()
