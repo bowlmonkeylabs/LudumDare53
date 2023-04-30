@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2272739949878358622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2272739949878358621}
+  - component: {fileID: 2272739949878358619}
+  - component: {fileID: 2272739949878358620}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2272739949878358621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272739949878358622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2272739949878358619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272739949878358622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7744953dc2ce40899d1264bcaf1b8516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _container: {fileID: 11400000, guid: 9495b57cc6bb1a5428abe7de7f943963, type: 2}
+  _spawnPointContainer: {fileID: 0}
+  _prefab: {fileID: 7985185874719010290, guid: 1d1d8d807710f4e44a1c13c7e94416eb, type: 3}
+  _maxCount: 6
+  _spawnDelay: 5
+--- !u!114 &2272739949878358620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272739949878358622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7744953dc2ce40899d1264bcaf1b8516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _container: {fileID: 11400000, guid: f66301c0f47213148842bf6d6f0f9290, type: 2}
+  _spawnPointContainer: {fileID: 0}
+  _prefab: {fileID: 2443709314384484613, guid: 342a7b277d0fbd640b18512eaaf316d2, type: 3}
+  _maxCount: 6
+  _spawnDelay: 5

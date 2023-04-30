@@ -179,7 +179,7 @@ MonoBehaviour:
     EnableInstanceOptions: 0
     InstanceName: 
     InstancePath: IntermediateProperties
-    ConstantValue: 0.5
+    ConstantValue: 0.3
     Variable: {fileID: 0}
   CollisionMask:
     serializedVersion: 2
