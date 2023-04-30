@@ -543,20 +543,6 @@ MonoBehaviour:
     InstancePath: IntermediateProperties
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 6c0886eb2229b2b4f9490a82edcbbd84, type: 2}
-  _settingMusicVolume:
-    UseConstant: 0
-    EnableInstanceOptions: 0
-    InstanceName: 
-    InstancePath: IntermediateProperties
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  _settingSfxVolume:
-    UseConstant: 0
-    EnableInstanceOptions: 0
-    InstanceName: 
-    InstancePath: IntermediateProperties
-    ConstantValue: 0
-    Variable: {fileID: 0}
 --- !u!1 &5489579080823889774
 GameObject:
   m_ObjectHideFlags: 0
