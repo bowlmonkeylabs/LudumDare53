@@ -10,10 +10,18 @@ public class IntermissionLevelController : MonoBehaviour
     [SerializeField] private IntVariable _currentLevel;
 
     void Awake() {
-        DialogueLua.SetVariable("CurrentLevel", _currentLevel.Value);
+        SetDialogCurrentLevel();
+    }
+
+    void Update() {
+        SetDialogCurrentLevel();
     }
 
     public void LoadNextLevel() {
         SceneManager.LoadScene("Level" + _currentLevel.Value);
+    }
+
+    private void SetDialogCurrentLevel() {
+        DialogueLua.SetVariable("CurrentLevel", _currentLevel.Value);
     }
 }
