@@ -4,6 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
 using BML.ScriptableObjectCore.Scripts.Events;
+using BML.ScriptableObjectCore.Scripts.SceneReferences;
 
 namespace DefaultNamespace
 {
@@ -13,6 +14,7 @@ namespace DefaultNamespace
         [SerializeField] private NavMeshAgent _agent;
         [SerializeField] private float _captureTime = 3f;
         [SerializeField] private DynamicGameEvent _packageReturnedToVan;
+        [SerializeField] private TransformSceneReference _packageContainer;
 
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
 
@@ -96,6 +98,16 @@ namespace DefaultNamespace
         {
             //TODO: Add logic for capture here
             _packageReturnedToVan.Raise(_grabbablePackage.GetComponent<Package>());
+        }
+
+        public void DropPackage()
+        {
+            if (_grabbablePackage == null)
+                return;
+
+            _grabbablePackage.PackageAssigned = false;
+            _grabbablePackage.PackageAwayFromHouse = true;
+            _grabbablePackage.transform.parent = _packageContainer.Value;
         }
     }
 }
