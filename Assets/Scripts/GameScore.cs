@@ -14,5 +14,16 @@ namespace DefaultNamespace
         }
 
         public List<LevelScore> LevelScores;
+
+        public void RecordScore(int score)
+        {
+            LevelScores.Add(new LevelScore { Score = score });
+        }
+
+        public void Reset()
+        {
+            if (LevelScores == null) LevelScores = new List<LevelScore>();
+            else LevelScores.Clear();
+        }
     }
 }
