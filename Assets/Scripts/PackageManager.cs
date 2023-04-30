@@ -93,7 +93,7 @@ namespace DefaultNamespace
                 .OrderBy(p => UnityEngine.Random.value)
                 .FirstOrDefault();
 
-            if(pirate != null) {
+            if(!pirate.SafeIsUnityNull()) {
                 _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value)
                     .ForEach(ph => {
                         var package = ph.packages.Find(p => !p.AssignedToPirate);
