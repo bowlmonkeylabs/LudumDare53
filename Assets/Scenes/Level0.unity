@@ -488,10 +488,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 603467712, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 94.9539
+      objectReference: {fileID: 0}
+    - target: {fileID: 603467712, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 94.9539
+      objectReference: {fileID: 0}
+    - target: {fileID: 603467712, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 17.19705
+      objectReference: {fileID: 0}
+    - target: {fileID: 603467712, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.20351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036904885, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3115398940015444965, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: starterAssetsInputs
       value: 
       objectReference: {fileID: 3088997818583584210, guid: a1b71ee8786c690499247f9012696481, type: 3}
+    - target: {fileID: 3999611413342684039, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 40.43891
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756552743609748838, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756552743609748838, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756552743609748838, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 205.20634
+      objectReference: {fileID: 0}
     - target: {fileID: 5387726686921504454, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -535,6 +571,10 @@ PrefabInstance:
     - target: {fileID: 5387726686921504454, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277089998618863790, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: field of view
+      value: 40.43891
       objectReference: {fileID: 0}
     - target: {fileID: 7806481543781320553, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: _netContainer
