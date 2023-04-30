@@ -581,6 +581,7 @@ MonoBehaviour:
   _packagePrefab: {fileID: 7038163051491981930, guid: a3c08768399ef9c4084752fd99bbbcf8, type: 3}
   _packageSpawnTime: 5
   _packageLimitPerHouse: 1
+  _packageReturnedToVan: {fileID: 11400000, guid: 85dc7138fa38955479824336753cab1c, type: 2}
   _packagesAtEachHouse: []
 --- !u!4 &742105006
 Transform:

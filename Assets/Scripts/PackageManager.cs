@@ -9,14 +9,15 @@ using UnityEngine;
 
 [Serializable]
 public struct PackageHouse {
-    public GameObject spawnPoint;
+    public House house;
+    public Transform spawnPoint;
     public List<Package> packages;
 }
 
-public struct PackageDelivery {
-    public GameObject spawnPoint;
-    public Package package;
-}
+// public struct PackageDelivery {
+//     public GameObject spawnPoint;
+//     public Package package;
+// }
 namespace DefaultNamespace
 {
     public class PackageManager : MonoBehaviour
@@ -35,6 +36,8 @@ namespace DefaultNamespace
         //add back for drone delivery
         // [SerializeField] private float _packageDeliveryTime = 1;
 
+        [SerializeField] private DynamicGameEvent _packageReturnedToVan;
+
         [SerializeField, ReadOnly] private List<PackageHouse> _packagesAtEachHouse = new List<PackageHouse>();
 
         private Timer _packageSpawnTimer;
@@ -46,19 +49,27 @@ namespace DefaultNamespace
             //add back for drone delivery
             // _packageDeliverTimer = new Timer(_packageDeliveryTime);
             UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
-            Debug.Log(System.DateTime.Now.Millisecond);
         }
 
         void Start() {
             _houseContainer.Value.GetComponentsInChildren<House>()
                 .ForEach(h => {
                     _packagesAtEachHouse.Add(new PackageHouse {
+                            house = h,
                             spawnPoint = h.PackageSpawnPoint,
                             packages = new List<Package>()
                         }); 
                 });
 
             _packageSpawnTimer.Start();
+        }
+
+        void OnEnable() {
+            _packageReturnedToVan.Subscribe(RemovePackageReturnedToVan);
+        }
+
+        void OnDisable() {
+            _packageReturnedToVan.Unsubscribe(RemovePackageReturnedToVan);
         }
 
         void Update() {
@@ -80,9 +91,11 @@ namespace DefaultNamespace
             PackageHouse houseToSpawnAt = _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value).FirstOrDefault(ph => ph.packages.Count < _packageLimitPerHouse);
 
             if(!houseToSpawnAt.Equals(default(PackageHouse))) {
-                GameObject packageGameObject = Instantiate<GameObject>(_packagePrefab, houseToSpawnAt.spawnPoint.transform.position, Quaternion.identity, _packageContainer.Value);
+                GameObject packageGameObject = Instantiate<GameObject>(_packagePrefab, houseToSpawnAt.spawnPoint.position, Quaternion.identity, _packageContainer.Value);
 
                 Package package = packageGameObject.GetComponent<Package>();
+
+                package.house = houseToSpawnAt.house;
 
                 houseToSpawnAt.packages.Add(package);
 
@@ -112,12 +125,21 @@ namespace DefaultNamespace
 
                         if(package != null) {
                             Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
-                            pirate.SetTargetPackage(package.transform.position);
+                            pirate.SetTargetPackage(package);
                             package.PackageAssigned = true;
                             return;
                         }
                     });
             }
         }
+
+        private void RemovePackageReturnedToVan(object prev, object packageObj) {
+            Package package = (Package) packageObj;
+            _packagesAtEachHouse.Find(ph => ph.house.Equals(package.house)).packages.Remove(package);
+        }
+    }
+
+    public class DataObjects {
+
     }
 }

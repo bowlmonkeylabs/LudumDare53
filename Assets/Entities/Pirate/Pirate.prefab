@@ -196,6 +196,7 @@ MonoBehaviour:
   _patrol: {fileID: 7985185874719010289}
   _agent: {fileID: 7985185874719010288}
   _captureTime: 3
+  _packageReturnedToVan: {fileID: 11400000, guid: 85dc7138fa38955479824336753cab1c, type: 2}
 --- !u!114 &7985185874719010289
 MonoBehaviour:
   m_ObjectHideFlags: 0

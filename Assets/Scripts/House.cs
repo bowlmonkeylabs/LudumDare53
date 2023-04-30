@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    public GameObject PackageSpawnPoint;
+    public Transform PackageSpawnPoint;
 }

@@ -1,7 +1,9 @@
 ﻿using System;
+using BML.Scripts.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
+using BML.ScriptableObjectCore.Scripts.Events;
 
 namespace DefaultNamespace
 {
@@ -10,12 +12,14 @@ namespace DefaultNamespace
         [SerializeField] private Patrol _patrol;
         [SerializeField] private NavMeshAgent _agent;
         [SerializeField] private float _captureTime = 3f;
+        [SerializeField] private DynamicGameEvent _packageReturnedToVan;
 
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
 
         private Vector3 destination;
         private Vector3 vanPosition;
         private float arriveAtPackageTime = Mathf.NegativeInfinity;
+        private Package _grabbablePackage;
 
         [Serializable] 
         public enum PirateState
@@ -63,12 +67,13 @@ namespace DefaultNamespace
             return Vector3.Distance(transform.position, destination) < .5f;
         }
 
-        public void SetTargetPackage(Vector3 packagePos)
+        public void SetTargetPackage(Package package)
         {
             pirateState = PirateState.WalkingToPackage;
+            _grabbablePackage = package;
             _patrol.enabled = false;
-            destination = packagePos;
-            _agent.SetDestination(packagePos);
+            destination = _grabbablePackage.transform.position;
+            _agent.SetDestination(destination);
         }
 
         private void ArriveAtPackage()
@@ -80,6 +85,8 @@ namespace DefaultNamespace
         private void GrabPackage()
         {
             pirateState = PirateState.TakingPackageToVan;
+
+            _grabbablePackage.transform.parent = this.transform;
             
             //TODO: Get this van position dynamically
             _agent.SetDestination(vanPosition);
@@ -88,6 +95,7 @@ namespace DefaultNamespace
         private void CapturePackage()
         {
             //TODO: Add logic for capture here
+            _packageReturnedToVan.Raise(_grabbablePackage.GetComponent<Package>());
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Package : MonoBehaviour
 {
-    public bool PackageDelivered = false;
+    // public bool PackageDelivered = false;
     public bool PackageAssigned = false;
+    public House house;
 }
