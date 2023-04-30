@@ -24,7 +24,6 @@ namespace DefaultNamespace
 
             Transform randomSpawnPoint = _spawnPointContainer.GetChild(Random.Range(0, _spawnPointContainer.childCount));
             Instantiate(_prefab, randomSpawnPoint.position, Quaternion.identity, _container.Value);
-            Debug.Log($"Spawned {_prefab.name}! Count: {_container.Value.childCount}");
             lastSpawnTime = Time.time;
         }
     }
