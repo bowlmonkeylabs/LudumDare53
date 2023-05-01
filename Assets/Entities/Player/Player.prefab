@@ -984,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: field of view
-      value: 40.43891
+      value: 58.72517
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
@@ -1343,6 +1343,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainCamera: {fileID: 6277089998618863785}
   _firePoint: {fileID: 971058163}
+  _isPlayerInputDisabled:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 8caf97b21f719964b80b106b467825a4, type: 2}
   _interactDistance: 5
   _interactCastRadius: 0.25
   _interactMask:
