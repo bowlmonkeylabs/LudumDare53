@@ -97,6 +97,7 @@ namespace DefaultNamespace
                 _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value)
                     .ForEach(ph => {
                         var package = ph.packages.Find(p => p.AssignedToPirate == null);
+                        
                         if(package != null) {
                             Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
                             pirate.SetTargetPackage(package);
