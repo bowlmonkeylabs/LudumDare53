@@ -725,7 +725,7 @@ MonoBehaviour:
   _travelLimit: {x: 0.1, y: 0.025, z: 0.1}
   _bobLimit: {x: 2, y: 2, z: 2}
   _bobMultiplier: {x: 1, y: 1, z: 1}
-  _travelLimitFall: {x: 0.1, y: 0.1, z: 0.1}
+  _travelLimitFall: {x: 0.04, y: 0.04, z: 0.04}
   _fallMultiplier: 0
   rotX: 0
   rotY: 0
@@ -1066,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
+      value: 4063
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_Name
