@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using BML.ScriptableObjectCore.Scripts.Events;
 using BML.Scripts.Utils;
 using Sirenix.OdinInspector;
@@ -181,6 +181,14 @@ namespace DefaultNamespace
             {
                 Position = transform.position
             });
+        }
+
+        public void DestroySelf() {
+            if (_grabbablePackage != null) {
+                _grabbablePackage.DoDestroy(false);
+            }
+
+            Destroy(this.gameObject);
         }
     }
 }
