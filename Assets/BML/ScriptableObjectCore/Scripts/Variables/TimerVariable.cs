@@ -18,6 +18,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
     {
         [SerializeField] [FormerlySerializedAs("duration")] public float Duration;
         [ShowInInspector, NonSerialized] private float? remainingTime = null;
+        [ShowInInspector, NonSerialized] private bool hasStarted = false;
         [ShowInInspector, NonSerialized] private bool isFinished = false;
         [TextArea (7, 10)] [HideInInlineEditors] public String Description;
         
@@ -27,6 +28,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
         // public float Duration => duration;
         public float? RemainingTime => remainingTime;
         public float ElapsedTime => Duration - (remainingTime ?? Duration);
+        public bool HasStarted => hasStarted;
         public bool IsFinished => isFinished;
 
         public bool IsStopped => isStopped;
@@ -39,6 +41,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
         
         public void StartTimer()
         {
+            hasStarted = true;
             isStopped = false;
             isFinished = false;
             startTime = Time.time;
@@ -47,6 +50,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
         public void ResetTimer()
         {
             isStopped = true;
+            hasStarted = false;
             isFinished = false;
             startTime = Time.time;
         }
@@ -110,6 +114,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
 
         private bool AlwaysTrue => true;
         private bool isConstantStopped = true;
+        private bool hasConstantStarted = false;
         private bool isConstantFinished = false;
 
         public float ElapsedTime
@@ -192,6 +197,20 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
                 return false;
             }
         } 
+        
+        public bool HasStarted
+        {
+            get
+            {
+                if (UseConstant)
+                    return hasConstantStarted;
+                if (Variable != null)
+                    return Variable.HasStarted;
+                
+                Debug.LogError("Trying to access HasStarted for timer variable that is not set!");
+                return false;
+            }
+        } 
 
 
         public String Name
@@ -210,6 +229,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
         {
             Variable?.StartTimer();
             isConstantStopped = false;
+            hasConstantStarted = true;
             isConstantFinished = false;
             startTime = Time.time;
         }
@@ -218,6 +238,7 @@ namespace BML.ScriptableObjectCore.Scripts.Variables
         {
             Variable?.ResetTimer();
             isConstantStopped = true;
+            hasConstantStarted = false;
             isConstantFinished = false;
             startTime = Time.time;
         }

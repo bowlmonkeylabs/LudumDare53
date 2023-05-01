@@ -31,6 +31,9 @@ namespace Player
 		[Tooltip("Curve for analog look input smoothing")]
 		[SerializeField] AnimationCurve AnalogMovementCurve;
 
+		[SerializeField, FoldoutGroup("Caffeine")] private float _caffeineMoveSpeedMultiplier;
+		[SerializeField, FoldoutGroup("Caffeine")] private BoolReference _isCaffeinated;
+		
 		[SerializeField] private BoolReference _isPlayerInputDisabled;
 
 		[SerializeField] private Vector3Variable _outputCurrentVelocity;
@@ -237,6 +240,7 @@ namespace Player
 
 			// set target speed based on move speed, sprint speed and if sprint is pressed
 			float targetSpeed = sprinting ? SprintSpeed : MoveSpeed;
+			targetSpeed *= _isCaffeinated.Value ? _caffeineMoveSpeedMultiplier : 1f;
 
 				// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
