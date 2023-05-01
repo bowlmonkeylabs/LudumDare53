@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2036904883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -283,6 +283,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919704144925290454}
   m_CullTransparentMesh: 1
+--- !u!1 &2653302683572150744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5097317107184020531}
+  m_Layer: 6
+  m_Name: Right Hand Item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5097317107184020531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2653302683572150744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5798429907801653425}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2949373418615237157
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +634,102 @@ MonoBehaviour:
   PerformanceMode: 0
   references:
     version: 1
+--- !u!1 &7082374336922657973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5798429907801653425}
+  - component: {fileID: 3624667846399842627}
+  m_Layer: 6
+  m_Name: Right Hand Bob Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5798429907801653425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082374336922657973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: -0.15, z: 0.499}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5097317107184020531}
+  m_Father: {fileID: 6277089998618863785}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3624667846399842627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082374336922657973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a64461596f9453795d2d443908f06d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveInput:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: '{I} '
+    InstancePath: IntermediateProperties
+    ConstantValue: {x: 0, y: 0}
+    Variable: {fileID: 11400000, guid: cef4a99cce2c9814aa080630a1be2acc, type: 2}
+  _mouseInput:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: '{I} '
+    InstancePath: IntermediateProperties
+    ConstantValue: {x: 0, y: 0}
+    Variable: {fileID: 11400000, guid: b639d9c814583494998bf0da6ef32daa, type: 2}
+  _currentVelocity:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: '{I} '
+    InstancePath: IntermediateProperties
+    ConstantValue: {x: 0, y: 0, z: 0}
+    Variable: {fileID: 11400000, guid: 1d8e106b9e632c54d84a688a1df33f7c, type: 2}
+  _isGrounded:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: '{I} '
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fe6bf1c1404f55041a1d15123467507c, type: 2}
+  _sway: 1
+  _swayRotation: 1
+  _bobOffset: 1
+  _bobSway: 1
+  _fallOffset: 1
+  _fallRotation: 1
+  _positionOffsetLimit: 0.15
+  _rotationAngleLimitX: 25
+  _step: 0.1
+  _maxStepDistance: 0.06
+  _rotationStep: 4
+  _maxRotationStep: 5
+  _speedCurve: 1687.3634
+  _speedMultiplier: 1
+  _idleMultiplier: 0.01
+  _bobPhaseOffset: 0
+  _travelLimit: {x: 0.1, y: 0.025, z: 0.1}
+  _bobLimit: {x: 2, y: 2, z: 2}
+  _bobMultiplier: {x: 1, y: 1, z: 1}
+  _travelLimitFall: {x: 0.1, y: 0.1, z: 0.1}
+  _fallMultiplier: 0
+  rotX: 0
+  rotY: 0
+  rotZ: 0
 --- !u!1 &8237029089349002326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1252,16 @@ PrefabInstance:
     - {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
     - {fileID: 5420857361349278248, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+--- !u!1 &1616805505780896174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 7053923628708624378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2106519856387394324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 7053923628708624378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1616805505780896162 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8616685848737228376, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
@@ -1145,16 +1281,6 @@ GameObject:
 --- !u!4 &6378811482670541042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 7053923628708624378}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1616805505780896174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 7053923628708624378}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2106519856387394324 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 7053923628708624378}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3186588580182376575
@@ -1234,7 +1360,7 @@ MonoBehaviour:
   netGunUIContainer: {fileID: 919704144925290454}
   _netContainer: {fileID: 0}
   _netGunCooldown: 0.3
-  _netGunForce: 2000
+  _netGunForce: 3000
   _onFireNet:
     m_PersistentCalls:
       m_Calls:
@@ -1320,6 +1446,8 @@ MonoBehaviour:
     InstancePath: IntermediateProperties
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 8caf97b21f719964b80b106b467825a4, type: 2}
+  _outputCurrentVelocity: {fileID: 11400000, guid: 1d8e106b9e632c54d84a688a1df33f7c, type: 2}
+  _outputIsGrounded: {fileID: 11400000, guid: fe6bf1c1404f55041a1d15123467507c, type: 2}
   JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.1

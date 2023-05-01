@@ -33,6 +33,9 @@ namespace Player
 
 		[SerializeField] private BoolReference _isPlayerInputDisabled;
 
+		[SerializeField] private Vector3Variable _outputCurrentVelocity;
+		[SerializeField] private BoolVariable _outputIsGrounded;
+
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
@@ -125,6 +128,9 @@ namespace Player
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+
+			_outputCurrentVelocity.Value = _controller.velocity;
+			_outputIsGrounded.Value = _controller.isGrounded;
 		}
 
 		private void LateUpdate()
