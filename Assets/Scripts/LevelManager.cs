@@ -50,10 +50,7 @@ namespace DefaultNamespace
             
             _wonPreviousDay.Value = (_gameScore.LevelScores[_currentLevel.Value].Score >=
                                          _goalScore.LevelScores[_currentLevel.Value].Score);
-            
-            Debug.Log($"{_gameScore.LevelScores[_currentLevel.Value].Score} > {_goalScore.LevelScores[_currentLevel.Value].Score}");
-            
-            
+
             _onTimerEnd.Invoke();
         }
     }

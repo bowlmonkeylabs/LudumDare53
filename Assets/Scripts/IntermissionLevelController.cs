@@ -18,7 +18,8 @@ public class IntermissionLevelController : MonoBehaviour
     }
 
     public void LoadNextLevel() {
-        SceneManager.LoadScene("Level" + _currentLevel.Value);
+        //SceneManager.LoadScene("Level" + _currentLevel.Value);
+        SceneManager.LoadScene("Level0");
     }
 
     private void SetDialogCurrentLevel() {

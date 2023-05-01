@@ -11,6 +11,11 @@ GameObject:
   - component: {fileID: 7107311806933296372}
   - component: {fileID: 7107311806933296379}
   - component: {fileID: 6839361632315832748}
+  - component: {fileID: 405246080}
+  - component: {fileID: 405246081}
+  - component: {fileID: 405246082}
+  - component: {fileID: 3073806895102426309}
+  - component: {fileID: 8942230435402809359}
   m_Layer: 0
   m_Name: '[LevelManager]'
   m_TagString: Untagged
@@ -52,21 +57,21 @@ MonoBehaviour:
   _currentLevel:
     UseConstant: 0
     EnableInstanceOptions: 0
-    InstanceName: 
+    InstanceName: '{I} '
     InstancePath: IntermediateProperties
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 70f8e317fb9e73f45aadd8db1bdf03ce, type: 2}
   _levelScore:
     UseConstant: 0
     EnableInstanceOptions: 0
-    InstanceName: 
+    InstanceName: '{I} '
     InstancePath: IntermediateProperties
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
   _wonPreviousDay:
     UseConstant: 0
     EnableInstanceOptions: 0
-    InstanceName: 
+    InstanceName: '{I} '
     InstancePath: IntermediateProperties
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 2abcd5464bc10194c911318cda042fc9, type: 2}
@@ -74,6 +79,171 @@ MonoBehaviour:
   _goalScore: {fileID: 11400000, guid: 9875266aa64673540ac794f03a428241, type: 2}
   _isBossLevel: 0
   _onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3073806895102426309}
+        m_TargetAssemblyTypeName: BML.VisualStateMachine.Scripts.Events.ConditionalEvent,
+          StateMachine
+        m_MethodName: TryRaise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6839361632315832748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107311806933296373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9251a9f35d2c384a9e26195e0c63ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: BadEnding
+  LoadingSceneMode: 0
+--- !u!114 &405246080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107311806933296373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9251a9f35d2c384a9e26195e0c63ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: BestEnding
+  LoadingSceneMode: 0
+--- !u!114 &405246081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107311806933296373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9251a9f35d2c384a9e26195e0c63ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: GoodEnding
+  LoadingSceneMode: 0
+--- !u!114 &405246082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107311806933296373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b8cfadeea42a944b8c8ce8831a6141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameScore: {fileID: 11400000, guid: c379c6882daf1f24fb8b07e1ad6bdcf6, type: 2}
+  _gameScoreGoals: {fileID: 11400000, guid: 9875266aa64673540ac794f03a428241, type: 2}
+  _useBossScore: 1
+  _thresholdOne: 0
+  _thresholdTwo: 1
+  _thresholdThree: 3
+  _thresholdOneAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6839361632315832748}
+        m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _thresholdTwoAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405246081}
+        m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _thresholdThreeAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405246080}
+        m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _defaultAction:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3073806895102426309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107311806933296373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d9de05a2e70424e8718c7cf216b134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditionPreview: '-  Current Level  <  < Const>2
+
+'
+  StateMachines: []
+  ValidStates: []
+  InvalidStates: []
+  BoolConditions: []
+  FloatConditions: []
+  IntConditions:
+  - targetParameter:
+      UseConstant: 0
+      EnableInstanceOptions: 0
+      InstanceName: 
+      InstancePath: IntermediateProperties
+      ConstantValue: 0
+      Variable: {fileID: 11400000, guid: 70f8e317fb9e73f45aadd8db1bdf03ce, type: 2}
+    comparator: 0
+    value:
+      UseConstant: 1
+      EnableInstanceOptions: 0
+      InstanceName: 
+      InstancePath: IntermediateProperties
+      ConstantValue: 2
+      Variable: {fileID: 0}
+  TimerConditions: []
+  Vector2Conditions: []
+  Vector3Conditions: []
+  GameEventConditions: []
+  DynamicGameEventConditions: []
+  OnSuccess:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 70f8e317fb9e73f45aadd8db1bdf03ce, type: 2}
@@ -89,7 +259,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6839361632315832748}
+      - m_Target: {fileID: 8942230435402809359}
         m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
         m_MethodName: LoadScene
         m_Mode: 1
@@ -101,7 +271,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6839361632315832748
+  OnFailure:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405246082}
+        m_TargetAssemblyTypeName: DefaultNamespace.LevelPerformanceActions, BML.Scripts
+        m_MethodName: PerformAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8942230435402809359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

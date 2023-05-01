@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3206771, g: 0.25579494, b: 0.4110673, a: 1}
+  m_IndirectSpecularColor: {r: 0.32091647, g: 0.25605413, b: 0.41121715, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -488,116 +488,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343120084}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &405246078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7107311806933296373, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-  m_PrefabInstance: {fileID: 7107311807394307027}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &405246079 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6839361632315832748, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-  m_PrefabInstance: {fileID: 7107311807394307027}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405246078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9251a9f35d2c384a9e26195e0c63ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &405246080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405246078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9251a9f35d2c384a9e26195e0c63ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: BestEnding
-  LoadingSceneMode: 0
---- !u!114 &405246081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405246078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9251a9f35d2c384a9e26195e0c63ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: GoodEnding
-  LoadingSceneMode: 0
---- !u!114 &405246082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405246078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b8cfadeea42a944b8c8ce8831a6141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameScore: {fileID: 11400000, guid: c379c6882daf1f24fb8b07e1ad6bdcf6, type: 2}
-  _gameScoreGoals: {fileID: 11400000, guid: 9875266aa64673540ac794f03a428241, type: 2}
-  _useBossScore: 1
-  _thresholdOne: 0
-  _thresholdTwo: 1
-  _thresholdThree: 3
-  _thresholdOneAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405246079}
-        m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _thresholdTwoAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405246081}
-        m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _thresholdThreeAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405246080}
-        m_TargetAssemblyTypeName: MoreMountains.Tools.MMLoadScene, MoreMountains.Tools
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _defaultAction:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &423601692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2625576809035221951, guid: 867755622fa067f45987a032b1a1c85e, type: 3}
@@ -2825,10 +2715,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6839361632315832748, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: SceneName
-      value: BadEnding
-      objectReference: {fileID: 0}
     - target: {fileID: 7107311806933296372, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2876,50 +2762,6 @@ PrefabInstance:
     - target: {fileID: 7107311806933296373, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
       propertyPath: m_Name
       value: '[LevelManager]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _levelScore.InstanceName
-      value: '{I} '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _currentLevel.InstanceName
-      value: '{I} '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _wonPreviousDay.InstanceName
-      value: '{I} '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 405246082}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PerformAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DefaultNamespace.LevelPerformanceActions, BML.Scripts
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107311806933296379, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
-      propertyPath: _onTimerEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47afc0a156072954bb476ed5221436ce, type: 3}
