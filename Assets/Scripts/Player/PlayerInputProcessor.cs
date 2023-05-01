@@ -126,6 +126,7 @@ namespace Player
         {
 	        SetCursorState(!isPaused.Value);
 	        playerInput.SwitchCurrentActionMap(isPaused.Value ? "UI" : "Player");
+	        Time.timeScale = (isPaused.Value ? 0f : 1f);
         }
 
         private void SwitchInputState(object prev, object curr)
