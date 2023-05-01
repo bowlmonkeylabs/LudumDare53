@@ -82,10 +82,21 @@ namespace DefaultNamespace
                     if (!_patrol.enabled) _patrol.enabled = true;
                     break;
                 case (PirateState.WalkingToPackage):
+                    if (_grabbablePackage == null)
+                    {
+                        pirateState = PirateState.Patrolling;
+                        break;
+                    }
                     if (HasReachedDestination())
                         ArriveAtPackage();
                     break;
                 case (PirateState.CapturingPackage):
+                    if (_grabbablePackage == null)
+                    {
+                        pirateState = PirateState.Patrolling;
+                        break;
+                    }
+                    
                     if (arriveAtPackageTime + _captureTime < Time.time)
                     {
                         GrabPackage();
