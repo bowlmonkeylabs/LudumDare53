@@ -49,6 +49,13 @@ MonoBehaviour:
     UseConstant: 0
     ConstantDuration: 0
     Variable: {fileID: 11400000, guid: cbdadae1d7bfd8c418fc7eec0232020e, type: 2}
+  _currentLevel:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 70f8e317fb9e73f45aadd8db1bdf03ce, type: 2}
   _levelScore:
     UseConstant: 0
     EnableInstanceOptions: 0
@@ -56,7 +63,16 @@ MonoBehaviour:
     InstancePath: IntermediateProperties
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
+  _wonPreviousDay:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 2abcd5464bc10194c911318cda042fc9, type: 2}
   _gameScore: {fileID: 11400000, guid: c379c6882daf1f24fb8b07e1ad6bdcf6, type: 2}
+  _goalScore: {fileID: 11400000, guid: 9875266aa64673540ac794f03a428241, type: 2}
+  _isBossLevel: 0
   _onTimerEnd:
     m_PersistentCalls:
       m_Calls:

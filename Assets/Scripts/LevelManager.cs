@@ -8,8 +8,11 @@ namespace DefaultNamespace
     public class LevelManager : MonoBehaviour
     {
         [SerializeField] private TimerReference _levelTimer;
+        [SerializeField] private IntReference _currentLevel;
         [SerializeField] private IntReference _levelScore;
+        [SerializeField] private BoolReference _wonPreviousDay;
         [SerializeField] private GameScore _gameScore;
+        [SerializeField] private GameScore _goalScore;
         [SerializeField] private bool _isBossLevel = false;
         [SerializeField] private UnityEvent _onTimerEnd;
 
@@ -44,6 +47,12 @@ namespace DefaultNamespace
             } else {
                 _gameScore.RecordScore(_levelScore.Value);
             }
+            
+            _wonPreviousDay.Value = (_gameScore.LevelScores[_currentLevel.Value].Score >=
+                                         _goalScore.LevelScores[_currentLevel.Value].Score);
+            
+            Debug.Log($"{_gameScore.LevelScores[_currentLevel.Value].Score} > {_goalScore.LevelScores[_currentLevel.Value].Score}");
+            
             
             _onTimerEnd.Invoke();
         }

@@ -15,7 +15,7 @@ MonoBehaviour:
   EnableDebugOnUpdate: 0
   Description: 
   defaultValue: 0
-  runtimeValue: 10
+  runtimeValue: 1000
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 

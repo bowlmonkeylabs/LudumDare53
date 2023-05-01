@@ -13,6 +13,7 @@ namespace Player
     {
         [SerializeField, FoldoutGroup("References")] private Transform _mainCamera;
         [SerializeField, FoldoutGroup("References")] private Transform _firePoint;
+        [SerializeField, FoldoutGroup("References")] private BoolReference _isPlayerInputDisabled;
 
         [SerializeField, FoldoutGroup("Interact")] private float _interactDistance = 5f;
         [SerializeField, FoldoutGroup("Interact")] private float _interactCastRadius = .25f;
@@ -44,6 +45,7 @@ namespace Player
 
         private void OnPrimary(InputValue value)
         {
+            if (_isPlayerInputDisabled.Value) return;
             if (!value.isPressed) return;
             
             if (_hasNetGun)

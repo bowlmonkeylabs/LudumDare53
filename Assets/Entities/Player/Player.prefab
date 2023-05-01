@@ -858,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: field of view
-      value: 58.72517
+      value: 40.43891
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 6378811482670541042}
     - target: {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 58.72517
+      value: 40.43891
       objectReference: {fileID: 0}
     - target: {fileID: 8762286024517199033, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_Layer
@@ -1217,12 +1217,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainCamera: {fileID: 6277089998618863785}
   _firePoint: {fileID: 971058163}
+  _isPlayerInputDisabled:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 3975cff0b522fb945a1344e66029a983, type: 2}
   _interactDistance: 5
   _interactCastRadius: 0.25
   _interactMask:
     serializedVersion: 2
     m_Bits: 1537
-  _hasNetGun: 1
+  _hasNetGun: 0
   _netPrefab: {fileID: 5580472451043599047, guid: 85a1a6af5d7d63c4d8730154d42ac40a, type: 3}
   netGunUIContainer: {fileID: 919704144925290454}
   _netContainer: {fileID: 0}

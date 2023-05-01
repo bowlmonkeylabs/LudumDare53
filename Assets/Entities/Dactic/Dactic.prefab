@@ -112,15 +112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7264288092196024755, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0022554
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 7264288092196024755, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0000009536743
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7264288092196024755, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7328901
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 7264288092196024755, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
       propertyPath: m_LocalRotation.w
@@ -168,8 +168,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+--- !u!1 &4714271751290822436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7264288092196024766, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+  m_PrefabInstance: {fileID: 2712181438482525850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4714271751290822438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7264288092196024764, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+  m_PrefabInstance: {fileID: 2712181438482525850}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714271751290822436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4714271751700968125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7264288092606159911, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
   m_PrefabInstance: {fileID: 2712181438482525850}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1236780374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714271751290822436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcc561d61138de47bdb32d717cd44c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnityEvents:
+  - UnityCallback: 2
+    randomDelay: 0
+    delay: 0.05
+    delayMin: 0
+    delayMax: 0
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4714271751290822438}
+          m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.DialogueSystemTrigger,
+            Dialogue
+          m_MethodName: OnUse
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

@@ -74,7 +74,7 @@ MonoBehaviour:
       cancelConversation:
         key: 27
         buttonName: 
-    dialogueUI: {fileID: 101180, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
+    dialogueUI: {fileID: 177140, guid: 77d31c2998b2bd148b0ede2a5ab00489, type: 3}
     defaultCanvas: {fileID: 3877519015675555784}
     localizationSettings:
       language: 
@@ -88,7 +88,7 @@ MonoBehaviour:
       skipPCSubtitleAfterResponseMenu: 1
       subtitleCharsPerSecond: 30
       minSubtitleSeconds: 2
-      continueButton: 0
+      continueButton: 1
       requireContinueOnLastLine: 0
       richTextEmphases: 1
       informSequenceStartAndEnd: 0
