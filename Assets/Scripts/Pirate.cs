@@ -163,8 +163,12 @@ namespace DefaultNamespace
                 return;
 
             _grabbablePackage.AssignedToPirate = null;
-            _grabbablePackage.OnStoop = false;
+            _grabbablePackage.OnStoop = (pirateState == PirateState.CapturingPackage);
             _grabbablePackage.transform.parent = _packageContainer.Value;
+            if (pirateState == PirateState.TakingPackageToVan)
+            {
+                _grabbablePackage.Drop();
+            }
             _score.Value += _positiveScoreOnDropPackage;
             
             _onDropPackage.Raise(new OnDropPackagePayload()

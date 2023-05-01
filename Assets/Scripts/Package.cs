@@ -1,4 +1,5 @@
 using System;
+using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ namespace DefaultNamespace
         [ReadOnly] public bool OnStoop = true;
         [ReadOnly] public House house;
         [ReadOnly] public float TimeOnStoop;
+        [ReadOnly] public bool IsDropped = false;
+
+        [SerializeField] private MMF_Player _onDroppedFeedbacks;
 
         public void TryReturn()
         {
@@ -25,14 +29,20 @@ namespace DefaultNamespace
             if(AssignedToPirate != null && unassignFromPirate) {
                 AssignedToPirate.UnSetTargetPackage(this);
             }
+            _onDroppedFeedbacks.StopFeedbacks();
             house.packages.Remove(this);
-            Destroy(this.gameObject);
         }
 
         public void FixedUpdate() {
             if(OnStoop) {
                 TimeOnStoop += Time.deltaTime;
             }
+        }
+
+        public void Drop()
+        {
+            IsDropped = true;
+            _onDroppedFeedbacks.PlayFeedbacks();
         }
     }
 }

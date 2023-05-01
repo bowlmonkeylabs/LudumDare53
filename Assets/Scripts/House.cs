@@ -18,11 +18,19 @@ namespace DefaultNamespace
         public Transform PackageSpawnPoint;
         [ReadOnly] public List<Package> packages = new List<Package>();
 
-        void Update() {
-            packages.Where(p => p.OnStoop && p.TimeOnStoop >= _maxTimeOnStoop).ToList().ForEach(p => {
-                _score.Value += _positiveScoreOnHomeownerGrabPackage;
-                p.DoDestroy();
-            });
+        void Update()
+        {
+            for (int i = 0; i < packages.Count; i++)
+            {
+                var package = packages[i];
+                if (package.OnStoop && package.TimeOnStoop >= _maxTimeOnStoop)
+                {
+                    _score.Value += _positiveScoreOnHomeownerGrabPackage;
+                    packages.Remove(package);
+                    i--;
+                    package.DoDestroy();
+                }
+            }
         }
     }
 }
