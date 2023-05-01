@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 753809375}
   - component: {fileID: 753809378}
-  - component: {fileID: 753809377}
+  - component: {fileID: 350272042088023816}
   - component: {fileID: 753809376}
   m_Layer: 5
   m_Name: Value
@@ -180,7 +180,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753809374}
   m_CullTransparentMesh: 1
---- !u!114 &753809377
+--- !u!114 &350272042088023816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,12 +189,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 753809374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c424c864ff45fd9ebcc384047b086f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fd3a14c80c8aea409060b081e93ddc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 753809376}
-  _formatString: $0
-  _variable: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
+  _goalScores: {fileID: 11400000, guid: 9875266aa64673540ac794f03a428241, type: 2}
+  _currentLevel: {fileID: 11400000, guid: 70f8e317fb9e73f45aadd8db1bdf03ce, type: 2}
 --- !u!114 &753809376
 MonoBehaviour:
   m_ObjectHideFlags: 0
