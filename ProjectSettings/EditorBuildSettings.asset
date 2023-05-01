@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GoodEnding.unity
     guid: 51cf23a8b3824b24fbad4921c12af3cf
+  - enabled: 1
+    path: Assets/Scenes/RocketLaunch.unity
+    guid: af576682b1dab0040a6bd3260a918e60
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

@@ -87,8 +87,8 @@ MonoBehaviour:
       allowPCSubtitleReminders: 0
       skipPCSubtitleAfterResponseMenu: 1
       subtitleCharsPerSecond: 30
-      minSubtitleSeconds: 2
-      continueButton: 1
+      minSubtitleSeconds: 4
+      continueButton: 0
       requireContinueOnLastLine: 0
       richTextEmphases: 1
       informSequenceStartAndEnd: 0
