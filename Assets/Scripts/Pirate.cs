@@ -192,7 +192,7 @@ namespace DefaultNamespace
             }
 
             _grabbablePackage.Assign(null);
-            _grabbablePackage.OnStoop = (pirateState == PirateState.CapturingPackage);
+            _grabbablePackage.OnStoop = (pirateState == PirateState.Patrolling || pirateState == PirateState.WalkingToPackage || pirateState == PirateState.CapturingPackage);
             _grabbablePackage.transform.parent = _packageContainer.Value;
             if (pirateState == PirateState.TakingPackageToVan)
             {

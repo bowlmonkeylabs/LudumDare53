@@ -37,10 +37,12 @@ namespace DefaultNamespace
         {
             if (!IsDropped)
                 return;
+            
+            _onDroppedFeedbacks.StopFeedbacks();
+            _onDroppedFeedbacks.ResetFeedbacks();
 
             OnPlayerReturned?.Invoke();
             _onReturnPackage.Invoke();
-            _onDroppedFeedbacks.StopFeedbacks();
             transform.position = house.PackageSpawnPoint.position;
             OnStoop = true;
             IsDropped = false;
@@ -53,6 +55,7 @@ namespace DefaultNamespace
             }
             _onDroppedFeedbacks.StopFeedbacks();
             house.RemovePackage(this);
+            Destroy(this.gameObject);
         }
 
         public void FixedUpdate() {
