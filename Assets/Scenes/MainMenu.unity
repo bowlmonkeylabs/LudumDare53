@@ -657,6 +657,18 @@ PrefabInstance:
         Use Gum - Shift/L Stick
         Press'
       objectReference: {fileID: 0}
+    - target: {fileID: 190287009064727086, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_lineSpacing
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 190287009064727086, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 190287009064727086, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 585732409954172035, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -680,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 585732409954172035, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 585732410516418531, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 585732410732021693, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
       propertyPath: m_RootOrder
@@ -748,6 +764,18 @@ PrefabInstance:
     - target: {fileID: 585732411593780183, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152222544582038274, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 518.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152222544582038274, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 189.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152222544582038274, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.7
       objectReference: {fileID: 0}
     - target: {fileID: 4026156918444086591, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -832,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 6392669378013722298, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
       propertyPath: m_text
       value: BowlMonkeyLabs 2023
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535819577513138481, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc0f1a1b265988c42991a6300ebec3f4, type: 3}
