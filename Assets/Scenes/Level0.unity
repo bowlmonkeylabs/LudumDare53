@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -494,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 3088997818583584210, guid: a1b71ee8786c690499247f9012696481, type: 3}
     - target: {fileID: 3999611413342684039, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 40.43891
+      value: 54.53644
       objectReference: {fileID: 0}
     - target: {fileID: 5387726686921504454, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_RootOrder
@@ -542,7 +542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6277089998618863790, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: field of view
-      value: 40.43891
+      value: 54.53644
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277089998618863790, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4063
       objectReference: {fileID: 0}
     - target: {fileID: 7806481543781320553, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: _netContainer
@@ -554,11 +558,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1b71ee8786c690499247f9012696481, type: 3}
---- !u!20 &487845684 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6277089998618863790, guid: a1b71ee8786c690499247f9012696481, type: 3}
-  m_PrefabInstance: {fileID: 487845683}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &567059300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -904,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 176.81458, y: 139.68542}
+  m_AnchoredPosition: {x: 117.82251, y: 118.99317}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816157587
@@ -1786,6 +1785,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510482969}
   m_CullTransparentMesh: 1
+--- !u!20 &1645598292 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5750336584973966674, guid: a1b71ee8786c690499247f9012696481, type: 3}
+  m_PrefabInstance: {fileID: 487845683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1671949704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,9 +1944,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.19705, y: -2.20351}
+  m_AnchoredPosition: {x: 49.585506, y: -42.412415}
   m_SizeDelta: {x: 94.9539, y: 94.9539}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.84109676, y: 0.076542564}
 --- !u!114 &1899091511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2038,7 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CanvasScaler: {fileID: 2019187304}
-  m_Camera: {fileID: 487845684}
+  m_Camera: {fileID: 1645598292}
 --- !u!114 &2019187304
 MonoBehaviour:
   m_ObjectHideFlags: 0
