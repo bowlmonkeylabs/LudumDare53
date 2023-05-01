@@ -23,9 +23,9 @@ namespace DefaultNamespace
             if (OnStoop)
                 return;
 
+            _onReturnPackage.Invoke();
             transform.position = house.PackageSpawnPoint.position;
             OnStoop = true;
-            _onReturnPackage.Invoke();
         }
 
         public void DoDestroy(bool unassignFromPirate = true)
