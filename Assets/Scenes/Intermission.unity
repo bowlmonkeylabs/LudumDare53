@@ -561,6 +561,63 @@ MonoBehaviour:
   OffsetDirection: {x: 0, y: 0, z: -1}
   Up: {x: -0, y: -1, z: -0}
   AxisMask: {x: 1, y: 0, z: 1}
+--- !u!1001 &185112713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7507285456176180040, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_Name
+      value: Tutorial Computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d084cf6fd46552942871d3d07da52897, type: 3}
 --- !u!1 &202540290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1427,68 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6277089998618863790, guid: a1b71ee8786c690499247f9012696481, type: 3}
   m_PrefabInstance: {fileID: 487845683}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &490629183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7507285456176180040, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_Name
+      value: Tutorial Computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456714205280, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_text
+      value: If a porch pirate grabs a package, stop them before they get to their
+        van!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d084cf6fd46552942871d3d07da52897, type: 3}
 --- !u!1 &497126729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,7 +2981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257166915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.75, y: 2.55, z: 0.90000004}
+  m_LocalPosition: {x: 5.75, y: 2.55, z: -2.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1545933060}
@@ -4599,13 +4718,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08df9e1938050e34db2deb5b42ea89a8, type: 3}
+--- !u!1001 &1814576248
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7507285456176180040, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_Name
+      value: Tutorial Computer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.2469997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456176180043, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507285456714205280, guid: d084cf6fd46552942871d3d07da52897, type: 3}
+      propertyPath: m_text
+      value: It takes customers a while to get to their door..protect the package
+        until then!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d084cf6fd46552942871d3d07da52897, type: 3}
 --- !u!43 &1836695541
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh322622
+  m_Name: pb_Mesh182184
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
