@@ -18,12 +18,29 @@ namespace DefaultNamespace
 
         [SerializeField] private UnityEvent _onReturnPackage;
 
+        public delegate void OnPirateAssignedCallback();
+        public event OnPirateAssignedCallback OnPirateAssigned;
+        
+        public delegate void OnPirateReachedCallback();
+        public event OnPirateReachedCallback OnPirateReached;
+        
+        public delegate void OnPirateGrabbedCallback();
+        public event OnPirateGrabbedCallback OnPirateGrabbed;
+        
+        public delegate void OnPirateCapturedCallback();
+        public event OnPirateCapturedCallback OnPirateCaptured;
+        
+        public delegate void OnPlayerReturnedCallback();
+        public event OnPlayerReturnedCallback OnPlayerReturned;
+
         public void TryReturn()
         {
             if (!IsDropped)
                 return;
 
+            OnPlayerReturned?.Invoke();
             _onReturnPackage.Invoke();
+            _onDroppedFeedbacks.StopFeedbacks();
             transform.position = house.PackageSpawnPoint.position;
             OnStoop = true;
             IsDropped = false;
@@ -35,19 +52,31 @@ namespace DefaultNamespace
                 AssignedToPirate.UnSetTargetPackage(this);
             }
             _onDroppedFeedbacks.StopFeedbacks();
-            house.packages.Remove(this);
+            house.RemovePackage(this);
         }
 
         public void FixedUpdate() {
-            if(OnStoop) {
+            if (OnStoop) {
                 TimeOnStoop += Time.deltaTime;
             }
+        }
+
+        public void Assign(Pirate pirate)
+        {
+            AssignedToPirate = pirate;
+            OnPirateAssigned?.Invoke();
+        }
+
+        public void StartGrab(Pirate pirate)
+        {
+            OnPirateReached?.Invoke();
         }
 
         public void Grab(Pirate pirate)
         {
             OnStoop = false;
             transform.parent = pirate.transform;
+            OnPirateGrabbed?.Invoke();
             
         }
 
@@ -55,6 +84,13 @@ namespace DefaultNamespace
         {
             IsDropped = true;
             _onDroppedFeedbacks.PlayFeedbacks();
+        }
+
+        public void Capture()
+        {
+            OnPirateCaptured?.Invoke();
+            
+            DoDestroy(false);
         }
     }
 }

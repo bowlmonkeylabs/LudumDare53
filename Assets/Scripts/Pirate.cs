@@ -35,6 +35,7 @@ namespace DefaultNamespace
         [SerializeField] private UnityEvent _onDropPackageEvent;
         
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
+        public PirateState State => pirateState;
 
 
         public class OnGrabPackagePayload
@@ -134,6 +135,7 @@ namespace DefaultNamespace
         {
             pirateState = PirateState.CapturingPackage;
             arriveAtPackageTime = Time.time;
+            _grabbablePackage.StartGrab(this);
             
             _onStartGrabPackage.Raise(new OnGrabPackagePayload()
             {
@@ -164,7 +166,8 @@ namespace DefaultNamespace
         private void CapturePackage()
         {
             //TODO: Add logic for capture here
-            _grabbablePackage.DoDestroy(false);
+            _grabbablePackage.Capture();
+            
             _score.Value -= _negativeScoreOnTakeToVan;
             
             _onCapturePackage.Raise(new OnCapturePackagePayload()
@@ -178,15 +181,17 @@ namespace DefaultNamespace
 
         public void DropPackage()
         {
+            Debug.Log($"Drop Package (Package {_grabbablePackage?.GetInstanceID()}) (Destroy on drop {_destroyPackageOnDrop}) (State {pirateState})");
+            
             if (_grabbablePackage == null)
                 return;
 
-            if(_destroyPackageOnDrop) {
+            if (_destroyPackageOnDrop) {
                 _grabbablePackage.DoDestroy();
                 return;
             }
 
-            _grabbablePackage.AssignedToPirate = null;
+            _grabbablePackage.Assign(null);
             _grabbablePackage.OnStoop = (pirateState == PirateState.CapturingPackage);
             _grabbablePackage.transform.parent = _packageContainer.Value;
             if (pirateState == PirateState.TakingPackageToVan)

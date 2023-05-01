@@ -63,7 +63,9 @@ namespace DefaultNamespace
                 return;
             }
 
-            House houseToSpawnAt = _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value).FirstOrDefault(ph => ph.packages.Count < _packageLimitPerHouse);
+            House houseToSpawnAt = _packagesAtEachHouse.Where(ph => ph.packages.Count < _packageLimitPerHouse)
+                .OrderBy(p => UnityEngine.Random.value)
+                .FirstOrDefault();
 
             if(houseToSpawnAt != null) {
                 GameObject packageGameObject = Instantiate<GameObject>(_packagePrefab, houseToSpawnAt.PackageSpawnPoint.position, Quaternion.identity, _packageContainer.Value);
@@ -72,7 +74,7 @@ namespace DefaultNamespace
 
                 package.house = houseToSpawnAt;
 
-                houseToSpawnAt.packages.Add(package);
+                houseToSpawnAt.AddPackage(package);
 
                 Debug.Log("Spawned package at: " + package.transform.position);
 
@@ -101,7 +103,7 @@ namespace DefaultNamespace
                         if(package != null) {
                             Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
                             pirate.SetTargetPackage(package);
-                            package.AssignedToPirate = pirate;
+                            package.Assign(pirate);
                             return;
                         }
                     });
