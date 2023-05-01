@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Goal_Game_Score
   m_EditorClassIdentifier: 
   LevelScores:
-  - Score: 25
-  - Score: 50
-  - Score: 75
+  - Score: 100
+  - Score: 200
+  - Score: 300
+  BossScore:
+    Score: 0

@@ -320,8 +320,9 @@ MonoBehaviour:
   _packageContainer: {fileID: 11400000, guid: f77aaeb0da1e2b74089f17aba8d23ab3, type: 2}
   vanContainerSceneReference: {fileID: 11400000, guid: d6fdbfcd57b029d498127aca4d17e626, type: 2}
   _positiveScoreOnDropPackage: 10
-  _negativeScoreOnGrabPackage: 20
+  _negativeScoreOnGrabPackage: {fileID: 11400000, guid: 0bcbece2fced50444854b9f8bfeb0384, type: 2}
   _negativeScoreOnTakeToVan: 40
+  _destroyPackageOnDrop: 0
   _onStartGrabPackage: {fileID: 11400000, guid: b51a7b942e0d51d49a2b7999200a8e54, type: 2}
   _onGrabPackage: {fileID: 11400000, guid: bb0d35beb1af2e6499292906bc41c45b, type: 2}
   _onCapturePackage: {fileID: 11400000, guid: d0e9d6c77347c534c8cbb390c74caf41, type: 2}
@@ -340,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _patrolPointsContainer: {fileID: 11400000, guid: 29956d55349d8c845b2ff12e8bb88861, type: 2}
   _agent: {fileID: 7985185874719010288}
+  userRandomOrder: 1
 --- !u!136 &7985185874719010287
 CapsuleCollider:
   m_ObjectHideFlags: 0

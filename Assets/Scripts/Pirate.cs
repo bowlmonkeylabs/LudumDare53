@@ -20,7 +20,7 @@ namespace DefaultNamespace
         [SerializeField] private TransformSceneReference _packageContainer;
         [SerializeField] private TransformSceneReference vanContainerSceneReference;
         [SerializeField] private int _positiveScoreOnDropPackage = 5;
-        [SerializeField] private int _negativeScoreOnGrabPackage = 5;
+        [SerializeField] EvaluateCurveVariable _negativeScoreOnGrabPackage;
         [SerializeField] private int _negativeScoreOnTakeToVan = 10;
         [SerializeField] private bool _destroyPackageOnDrop = false;
 
@@ -136,7 +136,7 @@ namespace DefaultNamespace
             var van = vanContainerSceneReference.Value.GetChild((int) Mathf.Floor(UnityEngine.Random.value * vanContainerSceneReference.Value.childCount));
             _agent.SetDestination(van.position);
 
-            _score.Value -= _negativeScoreOnGrabPackage;
+            _score.Value -= Mathf.RoundToInt(_negativeScoreOnGrabPackage.Value);
             
             _onGrabPackage.Raise(new OnGrabPackagePayload()
             {

@@ -304,7 +304,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   CollisionMask:
     serializedVersion: 2
-    m_Bits: 1545
+    m_Bits: 1544
   ignoreTriggers: 1
   oneCollisionPerObject: 1
   HandleCollisions:
