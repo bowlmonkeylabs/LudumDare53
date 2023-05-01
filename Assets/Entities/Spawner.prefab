@@ -47,7 +47,7 @@ MonoBehaviour:
   _container: {fileID: 11400000, guid: 9495b57cc6bb1a5428abe7de7f943963, type: 2}
   _spawnPointContainer: {fileID: 0}
   _prefab: {fileID: 7985185874719010290, guid: 1d1d8d807710f4e44a1c13c7e94416eb, type: 3}
-  _maxCount: 6
+  _maxCount: 12
   _spawnDelay: 5
 --- !u!114 &2272739949878358620
 MonoBehaviour:
@@ -64,5 +64,5 @@ MonoBehaviour:
   _container: {fileID: 11400000, guid: f66301c0f47213148842bf6d6f0f9290, type: 2}
   _spawnPointContainer: {fileID: 0}
   _prefab: {fileID: 2443709314384484613, guid: 342a7b277d0fbd640b18512eaaf316d2, type: 3}
-  _maxCount: 6
+  _maxCount: 12
   _spawnDelay: 5

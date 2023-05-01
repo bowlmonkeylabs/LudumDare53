@@ -6,6 +6,7 @@ public class Patrol : MonoBehaviour
 {
     [SerializeField] private TransformSceneReference _patrolPointsContainer;
     [SerializeField] private NavMeshAgent _agent;
+    [SerializeField] private bool userRandomOrder = true;
 
     private int nextPointIndex = 0;
 
@@ -29,7 +30,8 @@ public class Patrol : MonoBehaviour
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
-        nextPointIndex = (nextPointIndex + 1) % _patrolPointsContainer.Value.childCount;
+        nextPointIndex = userRandomOrder ? Random.Range(0, _patrolPointsContainer.Value.childCount)
+            : (nextPointIndex + 1) % _patrolPointsContainer.Value.childCount;
     }
 
 

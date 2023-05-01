@@ -2841,41 +2841,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
---- !u!4 &9019714797055884827 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560593470327126}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3984994920850333761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560593470327126}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3984994920850333762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560593470327126}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &958970774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994920850333762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714797055884827}
-  packages: []
 --- !u!1001 &64560593688566647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2959,41 +2931,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
 --- !u!4 &3984994921303454304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560593688566647}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3984994921303454307 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560593688566647}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9019714797374778426 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560593688566647}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &958970772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994921303454307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714797374778426}
-  packages: []
 --- !u!1001 &64560593895931588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3081,41 +3025,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
---- !u!4 &9019714797699565961 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560593895931588}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3984994920445974480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560593895931588}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3984994920445974483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560593895931588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &958970770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994920445974480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714797699565961}
-  packages: []
 --- !u!1001 &64560594233035492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3265,41 +3181,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
 --- !u!4 &3984994920806857672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560594256204511}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3984994920806857675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560594256204511}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9019714797942416786 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560594256204511}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &958970773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994920806857675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714797942416786}
-  packages: []
 --- !u!1001 &64560594733370407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3445,6 +3333,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5470267711063469658, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7846493509209973197, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -3455,43 +3347,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9139645053465521702, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
---- !u!4 &9019714796635382945 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560594964534252}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3984994919358266104 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560594964534252}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3984994919358266107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560594964534252}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &958970771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994919358266104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714796635382945}
-  packages: []
 --- !u!1001 &64560595074413865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3575,41 +3439,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
---- !u!1 &3984994919468588093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560595074413865}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9019714796596347492 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560595074413865}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3984994919468588094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560595074413865}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &958970769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994919468588093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714796596347492}
-  packages: []
 --- !u!1001 &64560595210273701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3701,41 +3537,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
---- !u!4 &9019714796461700328 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560595210273701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3984994919335045810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 64560595210273701}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3984994919335045809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 64560595210273701}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &958970768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984994919335045809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 9019714796461700328}
-  packages: []
 --- !u!1001 &3984994920516056826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3823,41 +3631,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2948201419974377540, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
 --- !u!4 &64560593940832237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4010691042453793047, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
   m_PrefabInstance: {fileID: 3984994920516056826}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5369593200372105655 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9063823370433345357, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 3984994920516056826}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &64560593940832238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4010691042453793044, guid: 1a5378077d901d54a90fc9a6c8eaed25, type: 3}
-  m_PrefabInstance: {fileID: 3984994920516056826}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &958970775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64560593940832238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b96b6d30fdc9864fa18036f772ad64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
-  _maxTimeOnStoop: 20
-  _positiveScoreOnHomeownerGrabPackage: 5
-  PackageSpawnPoint: {fileID: 5369593200372105655}
-  packages: []
 --- !u!1001 &8383497242957883945
 PrefabInstance:
   m_ObjectHideFlags: 0

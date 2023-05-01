@@ -319,9 +319,9 @@ MonoBehaviour:
   _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
   _packageContainer: {fileID: 11400000, guid: f77aaeb0da1e2b74089f17aba8d23ab3, type: 2}
   vanContainerSceneReference: {fileID: 11400000, guid: d6fdbfcd57b029d498127aca4d17e626, type: 2}
-  _positiveScoreOnDropPackage: 20
-  _negativeScoreOnGrabPackage: 10
-  _negativeScoreOnTakeToVan: 50
+  _positiveScoreOnDropPackage: 10
+  _negativeScoreOnGrabPackage: 20
+  _negativeScoreOnTakeToVan: 40
   _onStartGrabPackage: {fileID: 11400000, guid: b51a7b942e0d51d49a2b7999200a8e54, type: 2}
   _onGrabPackage: {fileID: 11400000, guid: bb0d35beb1af2e6499292906bc41c45b, type: 2}
   _onCapturePackage: {fileID: 11400000, guid: d0e9d6c77347c534c8cbb390c74caf41, type: 2}
@@ -364,8 +364,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 5
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -505,9 +505,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7985185874719010289}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 7985185874719010288}
+        m_TargetAssemblyTypeName: UnityEngine.AI.NavMeshAgent, UnityEngine
+        m_MethodName: set_updatePosition
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -517,14 +517,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7985185874719010288}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
+        m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.IntVariable,
+          ScriptableObjectSystem
+        m_MethodName: Increment
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
