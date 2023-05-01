@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using BML.ScriptableObjectCore.Scripts.Events;
 using BML.Scripts.Utils;
 using Sirenix.OdinInspector;
@@ -22,6 +22,7 @@ namespace DefaultNamespace
         [SerializeField] private int _positiveScoreOnDropPackage = 5;
         [SerializeField] private int _negativeScoreOnGrabPackage = 5;
         [SerializeField] private int _negativeScoreOnTakeToVan = 10;
+        [SerializeField] private bool _destroyPackageOnDrop = false;
 
         [SerializeField] private DynamicGameEvent _onStartGrabPackage;
         [SerializeField] private DynamicGameEvent _onGrabPackage;
@@ -161,6 +162,11 @@ namespace DefaultNamespace
         {
             if (_grabbablePackage == null)
                 return;
+
+            if(_destroyPackageOnDrop) {
+                _grabbablePackage.DoDestroy();
+                return;
+            }
 
             _grabbablePackage.AssignedToPirate = null;
             _grabbablePackage.OnStoop = (pirateState == PirateState.CapturingPackage);
