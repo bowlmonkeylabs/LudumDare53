@@ -35,7 +35,7 @@ namespace DefaultNamespace
                 if (package.OnStoop && package.TimeOnStoop >= _maxTimeOnStoop)
                 {
                     _score.Value += _positiveScoreOnHomeownerGrabPackage;
-                    packages.Remove(package);
+                    RemovePackage(package);
                     i--;
                     package.DoDestroy();
                 }
@@ -62,11 +62,11 @@ namespace DefaultNamespace
 
         public void RemovePackage(Package package)
         {
-            
             package.OnPirateReached -= UpdateWarningIndicator;
             package.OnPirateGrabbed -= UpdateWarningIndicator;
             package.OnPirateCaptured -= UpdateWarningIndicator;
             package.OnPlayerReturned -= UpdateWarningIndicator;
+            packages.Remove(package);
         }
 
         #endregion
