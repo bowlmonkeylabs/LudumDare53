@@ -42,6 +42,7 @@ namespace Player
 
         private void OnEnable()
         {
+	        SwitchInputState("Player");
 	        isPaused.Subscribe(UpdateInputState);
 	        _switchInputStateEvent.Subscribe(SwitchInputState);
         }
