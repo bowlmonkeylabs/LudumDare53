@@ -27,9 +27,11 @@ namespace Player
         [SerializeField, FoldoutGroup("NetGun")] private float _netGunForce = 1000f;
         [SerializeField, FoldoutGroup("NetGun")] private UnityEvent _onFireNet;
 
-        [SerializeField, FoldoutGroup("Caffeine")] private IntReference _caffeineUsesRemaining;
+        [SerializeField, FoldoutGroup("Caffeine")] private BoolReference _isCaffeineUnlocked; 
         [SerializeField, FoldoutGroup("Caffeine")] private BoolReference _isCaffeinated;
-        [SerializeField] private TimerReference _caffeineTimer;
+        [SerializeField, FoldoutGroup("Caffeine")] private TimerReference _caffeineTimer;
+        [SerializeField, FoldoutGroup("Caffeine")] private TimerReference _caffeineCooldownTimer;
+        [SerializeField, FoldoutGroup("Caffeine")] private BoolReference _outputShowCaffeineAvailable;
 
         private float lastFireNetTime = Mathf.NegativeInfinity;
 
@@ -38,11 +40,13 @@ namespace Player
         private void OnEnable()
         {
             _caffeineTimer.SubscribeFinished(DisableCaffeine);
+            _caffeineCooldownTimer.SubscribeFinished(UpdateCaffeineIndicator);
         }
 
         private void OnDisable()
         {
             _caffeineTimer.UnsubscribeFinished(DisableCaffeine);
+            _caffeineCooldownTimer.UnsubscribeFinished(UpdateCaffeineIndicator);
         }
 
         private void Update()
@@ -62,6 +66,7 @@ namespace Player
             if (_caffeineTimer != null)
             {
                 _caffeineTimer.UpdateTime();
+                _caffeineCooldownTimer.UpdateTime();
             }
         }
 
@@ -103,15 +108,17 @@ namespace Player
 
         private void TryUseCaffeine()
         {
-            if (!_isCaffeinated.Value 
+            if (_isCaffeineUnlocked.Value
+                && !_isCaffeinated.Value 
                 && (!_caffeineTimer.HasStarted || _caffeineTimer.IsFinished)
-                && _caffeineUsesRemaining.Value >= 1)
+                && (!_caffeineCooldownTimer.HasStarted || _caffeineCooldownTimer.IsFinished))
             {
-                _caffeineUsesRemaining.Value -= 1;
                 _isCaffeinated.Value = true;
                 
                 _caffeineTimer.RestartTimer();
             }
+
+            UpdateCaffeineIndicator();
         }
 
         private void DisableCaffeine()
@@ -119,6 +126,17 @@ namespace Player
             _isCaffeinated.Value = false;
 
             _caffeineTimer.ResetTimer();
+            _caffeineCooldownTimer.RestartTimer();
+            
+            UpdateCaffeineIndicator();
+        }
+
+        private void UpdateCaffeineIndicator()
+        {
+            _outputShowCaffeineAvailable.Value =
+                _isCaffeinated.Value || (
+                    (!_caffeineCooldownTimer.HasStarted || _caffeineCooldownTimer.IsFinished) 
+                    && (!_caffeineTimer.HasStarted || _caffeineTimer.IsFinished));
         }
 
         private void TryInteract()
