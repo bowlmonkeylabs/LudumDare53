@@ -16,7 +16,8 @@ MonoBehaviour:
   IncludeSubdirectories: 0
   Description: 
   TriggerVariables: []
-  BoolVariables: []
+  BoolVariables:
+  - {fileID: 11400000, guid: 6ef38fa97c683fd4ebb4eaae73e0c9b9, type: 2}
   IntVariables:
   - {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
   FloatVariables: []
@@ -25,4 +26,5 @@ MonoBehaviour:
   QuaternionVariables: []
   TimerVariables:
   - {fileID: 11400000, guid: cbdadae1d7bfd8c418fc7eec0232020e, type: 2}
+  - {fileID: 11400000, guid: 0f50c9dc9a51f3c479d7c1e03f712728, type: 2}
   FunctionVariables: []

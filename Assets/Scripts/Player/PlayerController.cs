@@ -103,11 +103,12 @@ namespace Player
 
         private void TryUseCaffeine()
         {
-            Debug.Log($"TryUseCaffeine (IsCaffeinated {_isCaffeinated.Value}) (TimerStarted {_caffeineTimer.HasStarted}) (TimerFinished {_caffeineTimer.IsFinished})");
-            if (!_isCaffeinated.Value && (!_caffeineTimer.HasStarted || _caffeineTimer.IsFinished))
+            if (!_isCaffeinated.Value 
+                && (!_caffeineTimer.HasStarted || _caffeineTimer.IsFinished)
+                && _caffeineUsesRemaining.Value >= 1)
             {
+                _caffeineUsesRemaining.Value -= 1;
                 _isCaffeinated.Value = true;
-                Debug.Log("Start Caffeine");
                 
                 _caffeineTimer.RestartTimer();
             }
@@ -116,7 +117,6 @@ namespace Player
         private void DisableCaffeine()
         {
             _isCaffeinated.Value = false;
-            Debug.Log("End Caffeine");
 
             _caffeineTimer.ResetTimer();
         }
