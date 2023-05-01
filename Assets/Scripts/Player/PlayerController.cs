@@ -27,16 +27,42 @@ namespace Player
         [SerializeField, FoldoutGroup("NetGun")] private float _netGunForce = 1000f;
         [SerializeField, FoldoutGroup("NetGun")] private UnityEvent _onFireNet;
 
+        [SerializeField, FoldoutGroup("Caffeine")] private IntReference _caffeineUsesRemaining;
+        [SerializeField, FoldoutGroup("Caffeine")] private BoolReference _isCaffeinated;
+        [SerializeField] private TimerReference _caffeineTimer;
+
         private float lastFireNetTime = Mathf.NegativeInfinity;
 
         #region Unity Lifecycle
 
+        private void OnEnable()
+        {
+            _caffeineTimer.SubscribeFinished(DisableCaffeine);
+        }
+
+        private void OnDisable()
+        {
+            _caffeineTimer.UnsubscribeFinished(DisableCaffeine);
+        }
+
         private void Update()
         {
             if (_hasNetGun && !netGunUIContainer.activeSelf)
+            {
                 netGunUIContainer.SetActive(true);
+            }
             if (!_hasNetGun && netGunUIContainer.activeSelf)
+            {
                 netGunUIContainer.SetActive(false);
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            if (_caffeineTimer != null)
+            {
+                _caffeineTimer.UpdateTime();
+            }
         }
 
         #endregion
@@ -54,6 +80,14 @@ namespace Player
                 TryInteract();
         }
 
+        private void OnUseCaffeine(InputValue value)
+        {
+            if (_isPlayerInputDisabled.Value) return;
+            if (!value.isPressed) return;
+            
+            TryUseCaffeine();
+        }
+
         #endregion
 
         private void TryFireNetGun()
@@ -65,6 +99,26 @@ namespace Player
             net.GetComponent<Rigidbody>().AddForce(_netGunForce * _mainCamera.forward);
             lastFireNetTime = Time.time;
             _onFireNet.Invoke();
+        }
+
+        private void TryUseCaffeine()
+        {
+            Debug.Log($"TryUseCaffeine (IsCaffeinated {_isCaffeinated.Value}) (TimerStarted {_caffeineTimer.HasStarted}) (TimerFinished {_caffeineTimer.IsFinished})");
+            if (!_isCaffeinated.Value && (!_caffeineTimer.HasStarted || _caffeineTimer.IsFinished))
+            {
+                _isCaffeinated.Value = true;
+                Debug.Log("Start Caffeine");
+                
+                _caffeineTimer.RestartTimer();
+            }
+        }
+
+        private void DisableCaffeine()
+        {
+            _isCaffeinated.Value = false;
+            Debug.Log("End Caffeine");
+
+            _caffeineTimer.ResetTimer();
         }
 
         private void TryInteract()

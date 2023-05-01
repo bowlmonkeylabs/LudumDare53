@@ -1608,6 +1608,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _caffeineUsesRemaining:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: ff13d9f70978ca741b1889bb3f661733, type: 2}
+  _isCaffeinated:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 6ef38fa97c683fd4ebb4eaae73e0c9b9, type: 2}
+  _caffeineTimer:
+    UseConstant: 0
+    ConstantDuration: 0
+    Variable: {fileID: 11400000, guid: 0f50c9dc9a51f3c479d7c1e03f712728, type: 2}
 --- !u!114 &8153703344567043914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,6 +1689,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _caffeineMoveSpeedMultiplier: 1.8
+  _isCaffeinated:
+    UseConstant: 0
+    EnableInstanceOptions: 0
+    InstanceName: 
+    InstancePath: IntermediateProperties
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 6ef38fa97c683fd4ebb4eaae73e0c9b9, type: 2}
   _isPlayerInputDisabled:
     UseConstant: 0
     EnableInstanceOptions: 0
