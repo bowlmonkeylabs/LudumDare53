@@ -260,7 +260,7 @@ Transform:
   - {fileID: 1376795836977775209}
   - {fileID: 9177640359623600801}
   m_Father: {fileID: 9177640360397632708}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9177640359415927884
 GameObject:
@@ -271,6 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9177640359415927883}
+  - component: {fileID: 8649727522401086182}
   m_Layer: 9
   m_Name: PirateHat
   m_TagString: Untagged
@@ -286,13 +287,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9177640359415927884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9177640359974207857}
   m_Father: {fileID: 9177640360397632708}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8649727522401086182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177640359415927884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f58a6bbbfa6054789cb071ed68593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrabMainCameraOnStart: 1
+  OffsetDirection: {x: 0, y: 0, z: -1}
+  Up: {x: -0, y: -1, z: -0}
+  AxisMask: {x: 1, y: 0, z: 1}
 --- !u!1 &9177640359574053402
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +545,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dd8ba234802323b44acba15fe9095ba8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36d7acc575c83c74a87ebc3a609bc483, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -566,7 +583,7 @@ GameObject:
   - component: {fileID: 9177640359974207857}
   - component: {fileID: 9177640359974207856}
   m_Layer: 0
-  m_Name: NetGun
+  m_Name: PirateHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,8 +597,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9177640359974207858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.099998474, y: 0.85, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 0, y: -0.8000001, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 9177640359415927883}
   m_RootOrder: 0
@@ -626,7 +643,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5144eee201be3bc43979270270135d97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2120e9c3d114d747b5d81c5b00196a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -769,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9177640360397632708}
   m_Layer: 9
-  m_Name: NPC1
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,9 +803,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 9177640359415927883}
   - {fileID: 9177640360407620385}
   - {fileID: 9177640359348035220}
-  - {fileID: 9177640359415927883}
   - {fileID: 9177640359251802636}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -822,5 +839,5 @@ Transform:
   m_Children:
   - {fileID: 9177640359078589690}
   m_Father: {fileID: 9177640360397632708}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
