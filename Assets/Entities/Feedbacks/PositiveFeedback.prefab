@@ -213,7 +213,7 @@ MonoBehaviour:
           TargetBPM: 120
         Owner: {fileID: 1976703758691993491}
         DebugActive: 0
-        Mode: 0
+        Mode: 1
         CachedRecycle: 1
         ParticlesPrefab: {fileID: 19877600, guid: 36bdc02b23d9ca94d93bd715c0cca5c0, type: 3}
         RandomParticlePrefabs: []
