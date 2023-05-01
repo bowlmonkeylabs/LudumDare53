@@ -33,7 +33,6 @@ namespace BML.Scripts.Utils
 
         private void UpdateDrag()
         {
-            Debug.Log($"Update drag ({_drag.Value})");
             _rigidbody.drag = _drag.Value;
         }
     }
