@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee3f20523483ae140947ceba712c88aa, type: 3}
-  m_Name: VanSceneReference
+  m_Name: VanContainerSceneReference
   m_EditorClassIdentifier: 
   Description: 
   reference: {fileID: 0}

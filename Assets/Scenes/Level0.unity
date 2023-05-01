@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1100,6 +1100,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 64560594218916611, guid: 32451404d92a1ff419e008c035d1f771, type: 3}
+      propertyPath: m_Name
+      value: Pirate Escape Points
+      objectReference: {fileID: 0}
     - target: {fileID: 64560594885466742, guid: 32451404d92a1ff419e008c035d1f771, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -1148,7 +1152,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUL DE SAC
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64560594218916609, guid: 32451404d92a1ff419e008c035d1f771, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 32451404d92a1ff419e008c035d1f771, type: 3}
 --- !u!4 &958970750 stripped
 Transform:
@@ -1157,7 +1162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &958970751 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 64560593884834619, guid: 32451404d92a1ff419e008c035d1f771, type: 3}
+  m_CorrespondingSourceObject: {fileID: 64560594218916610, guid: 32451404d92a1ff419e008c035d1f771, type: 3}
   m_PrefabInstance: {fileID: 958970749}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1137743390

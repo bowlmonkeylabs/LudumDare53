@@ -92,12 +92,12 @@ namespace DefaultNamespace
                 .Where(p => p.IsPatrolling && !p.SafeIsUnityNull())
                 .OrderBy(p => UnityEngine.Random.value)
                 .FirstOrDefault();
-
+                
             if(pirate != null) {
                 _packagesAtEachHouse.OrderBy(p => UnityEngine.Random.value)
                     .ForEach(ph => {
-                        var package = ph.packages.Find(p => !p.AssignedToPirate);
-
+                        var package = ph.packages.Find(p => p.AssignedToPirate == null);
+                        Debug.Log(package);
                         if(package != null) {
                             Debug.Log("Assigned package to pirate: " + pirate.gameObject.name);
                             pirate.SetTargetPackage(package);

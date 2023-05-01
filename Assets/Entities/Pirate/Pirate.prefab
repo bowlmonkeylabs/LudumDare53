@@ -344,7 +344,7 @@ MonoBehaviour:
   _captureTime: 3
   _score: {fileID: 11400000, guid: 11906289ea19f4b4eb75d8f277ab77b0, type: 2}
   _packageContainer: {fileID: 11400000, guid: f77aaeb0da1e2b74089f17aba8d23ab3, type: 2}
-  vanSceneReference: {fileID: 11400000, guid: d6fdbfcd57b029d498127aca4d17e626, type: 2}
+  vanContainerSceneReference: {fileID: 11400000, guid: d6fdbfcd57b029d498127aca4d17e626, type: 2}
   _positiveScoreOnDropPackage: 20
   _negativeScoreOnGrabPackage: 10
   _negativeScoreOnTakeToVan: 50

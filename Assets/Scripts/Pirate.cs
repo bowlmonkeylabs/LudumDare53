@@ -7,6 +7,7 @@ using UnityEngine.AI;
 using BML.ScriptableObjectCore.Scripts.Variables;
 using BML.ScriptableObjectCore.Scripts.SceneReferences;
 using Sirenix.Utilities;
+using System.Linq;
 
 namespace DefaultNamespace
 {
@@ -17,7 +18,7 @@ namespace DefaultNamespace
         [SerializeField] private float _captureTime = 3f;
         [SerializeField] private IntVariable _score;
         [SerializeField] private TransformSceneReference _packageContainer;
-        [SerializeField] private TransformSceneReference vanSceneReference;
+        [SerializeField] private TransformSceneReference vanContainerSceneReference;
         [SerializeField] private int _positiveScoreOnDropPackage = 5;
         [SerializeField] private int _negativeScoreOnGrabPackage = 5;
         [SerializeField] private int _negativeScoreOnTakeToVan = 10;
@@ -60,6 +61,10 @@ namespace DefaultNamespace
             get {
                 return pirateState == PirateState.Patrolling;
             }
+        }
+
+        private void Awake() {
+            UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
         }
 
         private void Update()
@@ -124,8 +129,11 @@ namespace DefaultNamespace
 
             _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = this.transform;
-            
-            _agent.SetDestination(vanSceneReference.Value.position);
+
+            // vanContainerSceneReference.Value.GetComponentsInChildren<Transform>()
+            // .OrderBy(v => UnityEngine.Random.value);
+            var van = vanContainerSceneReference.Value.GetChild((int) Mathf.Floor(UnityEngine.Random.value * vanContainerSceneReference.Value.childCount));
+            _agent.SetDestination(van.position);
 
             _score.Value -= _negativeScoreOnGrabPackage;
             
