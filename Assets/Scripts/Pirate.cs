@@ -1,4 +1,5 @@
 ﻿using System;
+using BML.ScriptableObjectCore.Scripts.Events;
 using BML.Scripts.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -21,7 +22,27 @@ namespace DefaultNamespace
         [SerializeField] private int _negativeScoreOnGrabPackage = 5;
         [SerializeField] private int _negativeScoreOnTakeToVan = 10;
 
+        [SerializeField] private DynamicGameEvent _onStartGrabPackage;
+        [SerializeField] private DynamicGameEvent _onGrabPackage;
+        [SerializeField] private DynamicGameEvent _onCapturePackage;
+        [SerializeField] private DynamicGameEvent _onDropPackage;
+
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
+
+        public class OnGrabPackagePayload
+        {
+            public Vector3 Position;
+        }
+
+        public class OnCapturePackagePayload
+        {
+            
+        }
+
+        public class OnDropPackagePayload
+        {
+            public Vector3 Position;
+        }
 
         private float arriveAtPackageTime = Mathf.NegativeInfinity;
         private Package _grabbablePackage;
@@ -90,6 +111,11 @@ namespace DefaultNamespace
         {
             pirateState = PirateState.CapturingPackage;
             arriveAtPackageTime = Time.time;
+            
+            _onStartGrabPackage.Raise(new OnGrabPackagePayload()
+            {
+                Position = transform.position
+            });
         }
 
         private void GrabPackage()
@@ -102,6 +128,11 @@ namespace DefaultNamespace
             _agent.SetDestination(vanSceneReference.Value.position);
 
             _score.Value -= _negativeScoreOnGrabPackage;
+            
+            _onGrabPackage.Raise(new OnGrabPackagePayload()
+            {
+                Position = transform.position
+            });
         }
 
         private void CapturePackage()
@@ -109,6 +140,12 @@ namespace DefaultNamespace
             //TODO: Add logic for capture here
             _grabbablePackage.DoDestroy(false);
             _score.Value -= _negativeScoreOnTakeToVan;
+            
+            _onCapturePackage.Raise(new OnCapturePackagePayload()
+            {
+                
+            });
+            
             Destroy(this.gameObject);
         }
 
@@ -121,6 +158,11 @@ namespace DefaultNamespace
             _grabbablePackage.OnStoop = false;
             _grabbablePackage.transform.parent = _packageContainer.Value;
             _score.Value += _positiveScoreOnDropPackage;
+            
+            _onDropPackage.Raise(new OnDropPackagePayload()
+            {
+                Position = transform.position
+            });
         }
     }
 }
