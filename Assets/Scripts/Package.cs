@@ -20,12 +20,13 @@ namespace DefaultNamespace
 
         public void TryReturn()
         {
-            if (OnStoop)
+            if (!IsDropped)
                 return;
 
             _onReturnPackage.Invoke();
             transform.position = house.PackageSpawnPoint.position;
             OnStoop = true;
+            IsDropped = false;
         }
 
         public void DoDestroy(bool unassignFromPirate = true)
@@ -41,6 +42,13 @@ namespace DefaultNamespace
             if(OnStoop) {
                 TimeOnStoop += Time.deltaTime;
             }
+        }
+
+        public void Grab(Pirate pirate)
+        {
+            OnStoop = false;
+            transform.parent = pirate.transform;
+            
         }
 
         public void Drop()

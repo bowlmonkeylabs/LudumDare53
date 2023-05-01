@@ -145,8 +145,7 @@ namespace DefaultNamespace
         {
             pirateState = PirateState.TakingPackageToVan;
 
-            _grabbablePackage.OnStoop = false;
-            _grabbablePackage.transform.parent = this.transform;
+            _grabbablePackage.Grab(this);
 
             // vanContainerSceneReference.Value.GetComponentsInChildren<Transform>()
             // .OrderBy(v => UnityEngine.Random.value);
