@@ -1078,7 +1078,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Thank you for ze contribution to science!
         type: 0
         typeString: 
       - title: Sequence
@@ -1101,7 +1101,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 11.227272
-        y: 433.91968
+        y: 432.78333
         width: 160
         height: 30
     - id: 6

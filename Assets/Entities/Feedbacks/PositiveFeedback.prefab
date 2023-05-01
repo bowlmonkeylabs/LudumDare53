@@ -215,7 +215,7 @@ MonoBehaviour:
         DebugActive: 0
         Mode: 1
         CachedRecycle: 1
-        ParticlesPrefab: {fileID: 19877600, guid: 36bdc02b23d9ca94d93bd715c0cca5c0, type: 3}
+        ParticlesPrefab: {fileID: 1434212013297214042, guid: 8d6853aeecdad204ea957987f407cb18, type: 3}
         RandomParticlePrefabs: []
         ForceSetActiveOnPlay: 0
         PositionMode: 0

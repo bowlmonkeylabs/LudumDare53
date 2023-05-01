@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: actor
       value: Dactic
       objectReference: {fileID: 0}
+    - target: {fileID: 7264288092196024765, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+      propertyPath: spritePortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 0682c862f5c08394c97a061fe73ce86a, type: 3}
     - target: {fileID: 7264288092196024766, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
       propertyPath: m_Name
       value: Dactic
