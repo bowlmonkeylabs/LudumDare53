@@ -1484,7 +1484,8 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Welcome to Day 1 Scout. We need you on the front lines defending against
-          those Porch Pirates! Err, and try not to hit the civilians
+          those Porch Pirates! Err, and try not to hit the civilians. Consult the
+          computers for more info.
         type: 0
         typeString: 
       - title: Sequence
@@ -3512,7 +3513,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Yezzos Rocket launches without you
+        value: Jorf Borzos Rocket launches without you
         type: 0
         typeString: 
       - title: Sequence
@@ -3567,7 +3568,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You did not make it in time.
+        value: All of your hard work and this is how you are rewarded...
         type: 0
         typeString: 
       - title: Sequence
@@ -3622,7 +3623,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Now you are stuck in the dome
+        value: Stuck on this earth...
         type: 0
         typeString: 
       - title: Sequence
