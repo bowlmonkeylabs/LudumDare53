@@ -8,6 +8,7 @@ using BML.ScriptableObjectCore.Scripts.Variables;
 using BML.ScriptableObjectCore.Scripts.SceneReferences;
 using Sirenix.Utilities;
 using System.Linq;
+using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
@@ -29,7 +30,12 @@ namespace DefaultNamespace
         [SerializeField] private DynamicGameEvent _onCapturePackage;
         [SerializeField] private DynamicGameEvent _onDropPackage;
 
+        [SerializeField] private UnityEvent _onGrabPackageEvent;
+        [SerializeField] private UnityEvent _onCapturePackageEvent;
+        [SerializeField] private UnityEvent _onDropPackageEvent;
+        
         [ShowInInspector, ReadOnly] private PirateState pirateState = PirateState.Patrolling;
+
 
         public class OnGrabPackagePayload
         {
@@ -142,6 +148,7 @@ namespace DefaultNamespace
             {
                 Position = transform.position
             });
+            _onGrabPackageEvent.Invoke();
         }
 
         private void CapturePackage()
@@ -154,6 +161,7 @@ namespace DefaultNamespace
             {
                 
             });
+            _onCapturePackageEvent.Invoke();
             
             Destroy(this.gameObject);
         }
@@ -181,6 +189,7 @@ namespace DefaultNamespace
             {
                 Position = transform.position
             });
+            _onDropPackageEvent.Invoke();
         }
 
         public void DestroySelf() {

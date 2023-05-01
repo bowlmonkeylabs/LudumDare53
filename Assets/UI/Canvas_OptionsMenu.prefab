@@ -460,6 +460,10 @@ PrefabInstance:
       value: Slider_Main Volume
       objectReference: {fileID: 0}
     - target: {fileID: 1087292292359999336, guid: 832b67d2393474246a0fbe55c72aa45e, type: 3}
+      propertyPath: m_Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1087292292359999336, guid: 832b67d2393474246a0fbe55c72aa45e, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 4
       objectReference: {fileID: 0}

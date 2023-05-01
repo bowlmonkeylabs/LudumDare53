@@ -2,6 +2,7 @@ using System;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
@@ -15,6 +16,8 @@ namespace DefaultNamespace
 
         [SerializeField] private MMF_Player _onDroppedFeedbacks;
 
+        [SerializeField] private UnityEvent _onReturnPackage;
+
         public void TryReturn()
         {
             if (OnStoop)
@@ -22,6 +25,7 @@ namespace DefaultNamespace
 
             transform.position = house.PackageSpawnPoint.position;
             OnStoop = true;
+            _onReturnPackage.Invoke();
         }
 
         public void DoDestroy(bool unassignFromPirate = true)

@@ -106,6 +106,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 973649651639950700, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].RandomSfx.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 973649651639950700, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].RandomSfx.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c761f386f4aab05499890154bdc0f4f6, type: 3}
+    - target: {fileID: 973649651639950700, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].RandomSfx.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a0e7cf79d5314c44b95ae6fa680617cd, type: 3}
+    - target: {fileID: 973649651639950700, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
+      propertyPath: FeedbacksList.Array.data[0].RandomSfx.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 11f3d57251dc1e047b567d658189c472, type: 3}
     - target: {fileID: 7264288092196024755, guid: 1ef003e9d0c117647810f41cfcd36499, type: 3}
       propertyPath: m_RootOrder
       value: 0
