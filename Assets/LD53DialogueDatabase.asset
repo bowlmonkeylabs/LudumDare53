@@ -1036,11 +1036,11 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 11400000, guid: ff13d9f70978ca741b1889bb3f661733, type: 2}
-            m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.Variable`1[[System.Int32,
+          - m_Target: {fileID: 11400000, guid: 9f3955cfeb7088244b35bc94de655ef5, type: 2}
+            m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.Variable`1[[System.Boolean,
               mscorlib
             m_MethodName: set_Value
-            m_Mode: 3
+            m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1153,11 +1153,11 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 11400000, guid: ff13d9f70978ca741b1889bb3f661733, type: 2}
-            m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.Variable`1[[System.Int32,
+          - m_Target: {fileID: 11400000, guid: 9f3955cfeb7088244b35bc94de655ef5, type: 2}
+            m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.Variable`1[[System.Boolean,
               mscorlib
             m_MethodName: set_Value
-            m_Mode: 3
+            m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1168,7 +1168,7 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 360.74863
+        x: 363.50095
         y: 367.67642
         width: 160
         height: 30
@@ -1270,18 +1270,18 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 11400000, guid: ff13d9f70978ca741b1889bb3f661733, type: 2}
-            m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.Variable`1[[System.Int32,
+          - m_Target: {fileID: 11400000, guid: 9f3955cfeb7088244b35bc94de655ef5, type: 2}
+            m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Variables.Variable`1[[System.Boolean,
               mscorlib
             m_MethodName: set_Value
-            m_Mode: 3
+            m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 7
               m_FloatArgument: 0
               m_StringArgument: 
-              m_BoolArgument: 0
+              m_BoolArgument: 1
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
@@ -1339,8 +1339,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 64.772736, y: 0}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 0, y: 38.083008}
+    canvasZoom: 1.0899999
   - id: 4
     fields:
     - title: Title
