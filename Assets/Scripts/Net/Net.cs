@@ -13,6 +13,11 @@ namespace DefaultNamespace.Net
                 AttemptNet(col);
             }
         }
+
+        public void DestroySelf()
+        {
+            Destroy(this.gameObject);
+        }
         
         private void AttemptNet(Collider col)
         {
