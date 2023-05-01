@@ -743,6 +743,10 @@ PrefabInstance:
       propertyPath: _netContainer
       value: 
       objectReference: {fileID: 1722698596}
+    - target: {fileID: 7806481543781320553, guid: a1b71ee8786c690499247f9012696481, type: 3}
+      propertyPath: netGunUIContainer
+      value: 
+      objectReference: {fileID: 816157585}
     - target: {fileID: 8237029089349002326, guid: a1b71ee8786c690499247f9012696481, type: 3}
       propertyPath: m_Name
       value: Player
