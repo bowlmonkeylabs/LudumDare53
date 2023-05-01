@@ -273,7 +273,7 @@ MonoBehaviour:
   _onReturnPackage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4371007634215399401}
+      - m_Target: {fileID: 1323577002995714715}
         m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
         m_MethodName: PlayFeedbacks
         m_Mode: 1
@@ -518,9 +518,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1976703758691993490, guid: a41d6e52bbc0e6046922762c3cbc3feb, type: 3}
   m_PrefabInstance: {fileID: 2866076965187217530}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4371007634215399401 stripped
+--- !u!114 &1323577002995714715 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1976703758691993491, guid: a41d6e52bbc0e6046922762c3cbc3feb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3861858211552715489, guid: a41d6e52bbc0e6046922762c3cbc3feb, type: 3}
   m_PrefabInstance: {fileID: 2866076965187217530}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

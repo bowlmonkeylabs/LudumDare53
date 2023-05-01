@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6312853785213814377}
-  - component: {fileID: 2851298007163920307}
+  - component: {fileID: 1234746508827003726}
   m_Layer: 0
   m_Name: NegetiveFeedback
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2851298007163920307
+--- !u!114 &1234746508827003726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
           TrackID: 0
           Quantized: 0
           TargetBPM: 120
-        Owner: {fileID: 2851298007163920307}
+        Owner: {fileID: 1234746508827003726}
         DebugActive: 0
         Sfx: {fileID: 0}
         RandomSfx:
@@ -210,7 +210,7 @@ MonoBehaviour:
           TrackID: 0
           Quantized: 0
           TargetBPM: 120
-        Owner: {fileID: 2851298007163920307}
+        Owner: {fileID: 1234746508827003726}
         DebugActive: 0
         Mode: 0
         BoundParticleSystem: {fileID: 567013371822855106}

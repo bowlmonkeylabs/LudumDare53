@@ -244,7 +244,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2688925907710111299}
+      - m_Target: {fileID: 1433148380798171838}
         m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
         m_MethodName: PlayFeedbacks
         m_Mode: 1
@@ -540,9 +540,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6312853785213814377, guid: cbe4c9550fc7be24ea42e6d9325dfdae, type: 3}
   m_PrefabInstance: {fileID: 198479112798417392}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2688925907710111299 stripped
+--- !u!114 &1433148380798171838 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2851298007163920307, guid: cbe4c9550fc7be24ea42e6d9325dfdae, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1234746508827003726, guid: cbe4c9550fc7be24ea42e6d9325dfdae, type: 3}
   m_PrefabInstance: {fileID: 198479112798417392}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

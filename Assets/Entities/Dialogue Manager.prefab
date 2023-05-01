@@ -194,7 +194,7 @@ MonoBehaviour:
   alwaysAutoFocus: 1
   detectMouseControl: 1
   mouseMoveThreshold: 0.1
-  controlCursorState: 1
+  controlCursorState: 0
   enforceCursorOnPause: 0
   controlGraphicRaycasters: 0
   backKeyCodes: 4b010000

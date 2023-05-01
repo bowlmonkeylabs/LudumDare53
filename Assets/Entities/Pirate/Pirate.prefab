@@ -335,7 +335,7 @@ MonoBehaviour:
   _onCapturePackageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6404348819683507538}
+      - m_Target: {fileID: 7949902654248593839}
         m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
         m_MethodName: PlayFeedbacks
         m_Mode: 1
@@ -567,7 +567,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6527293912542680326}
+      - m_Target: {fileID: 8386583453653495924}
         m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
         m_MethodName: PlayFeedbacks
         m_Mode: 1
@@ -5034,9 +5034,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1976703758691993490, guid: a41d6e52bbc0e6046922762c3cbc3feb, type: 3}
   m_PrefabInstance: {fileID: 4754449505312117397}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6527293912542680326 stripped
+--- !u!114 &8386583453653495924 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1976703758691993491, guid: a41d6e52bbc0e6046922762c3cbc3feb, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3861858211552715489, guid: a41d6e52bbc0e6046922762c3cbc3feb, type: 3}
   m_PrefabInstance: {fileID: 4754449505312117397}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -5359,9 +5359,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6312853785213814377, guid: cbe4c9550fc7be24ea42e6d9325dfdae, type: 3}
   m_PrefabInstance: {fileID: 9183131284042785505}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6404348819683507538 stripped
+--- !u!114 &7949902654248593839 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2851298007163920307, guid: cbe4c9550fc7be24ea42e6d9325dfdae, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1234746508827003726, guid: cbe4c9550fc7be24ea42e6d9325dfdae, type: 3}
   m_PrefabInstance: {fileID: 9183131284042785505}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

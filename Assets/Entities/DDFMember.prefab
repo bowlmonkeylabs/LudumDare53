@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 282336508805252260}
-  - component: {fileID: 973649651639950700}
+  - component: {fileID: 8719529397121471234}
   m_Layer: 0
   m_Name: ChatFeedback
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 7264288092196024755}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &973649651639950700
+--- !u!114 &8719529397121471234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
           TrackID: 0
           Quantized: 0
           TargetBPM: 120
-        Owner: {fileID: 973649651639950700}
+        Owner: {fileID: 8719529397121471234}
         DebugActive: 0
         Sfx: {fileID: 0}
         RandomSfx:
@@ -360,7 +360,7 @@ MonoBehaviour:
   onExecute:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 973649651639950700}
+      - m_Target: {fileID: 8719529397121471234}
         m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
         m_MethodName: PlayFeedbacks
         m_Mode: 1
