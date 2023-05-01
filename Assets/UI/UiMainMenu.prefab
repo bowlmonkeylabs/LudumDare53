@@ -407,10 +407,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TemplateUpdate
+  m_text: LudumDare53
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7f6d81d58a1c94b4e8845e25e3d36b2c, type: 2}
-  m_sharedMaterial: {fileID: 6022768379709069649, guid: 7f6d81d58a1c94b4e8845e25e3d36b2c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 318bbfe0500e41d4386c106723e12705, type: 2}
+  m_sharedMaterial: {fileID: -6779307887731341523, guid: 318bbfe0500e41d4386c106723e12705, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1285,7 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6497956022634779254, guid: b18c9d6c81420a446abdcabb20d0872b, type: 3}
       propertyPath: m_text
-      value: DefaultCompany 2022
+      value: BowlMonkeyLabs 2023
       objectReference: {fileID: 0}
     - target: {fileID: 6497956022634779254, guid: b18c9d6c81420a446abdcabb20d0872b, type: 3}
       propertyPath: m_fontSize

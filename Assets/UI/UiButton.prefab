@@ -558,8 +558,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8705446826158675923, guid: 08924a74a8d434f47adee56c94f31350, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705446826158675923, guid: 08924a74a8d434f47adee56c94f31350, type: 3}
+      propertyPath: ShapeProperties.DrawOutline
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705446826158675923, guid: 08924a74a8d434f47adee56c94f31350, type: 3}
+      propertyPath: OutlineProperties.LineWeight
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705446826158675923, guid: 08924a74a8d434f47adee56c94f31350, type: 3}
       propertyPath: RoundedProperties.UseMaxRadius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8705446826158675923, guid: 08924a74a8d434f47adee56c94f31350, type: 3}
+      propertyPath: ShapeProperties.FillColor.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705446826158675923, guid: 08924a74a8d434f47adee56c94f31350, type: 3}
       propertyPath: RoundedProperties.UniformRadius
