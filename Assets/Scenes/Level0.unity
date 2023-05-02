@@ -832,6 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567368026}
   - component: {fileID: 567368027}
+  - component: {fileID: 567368028}
   m_Layer: 0
   m_Name: '[ScriptableObjectResetManager]'
   m_TagString: Untagged
@@ -866,6 +867,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResetContainer: {fileID: 11400000, guid: 872c95e41d662a7448a78931b982099e, type: 2}
+--- !u!114 &567368028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567368025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcc561d61138de47bdb32d717cd44c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnityEvents:
+  - UnityCallback: 0
+    randomDelay: 0
+    delay: 0
+    delayMin: 0
+    delayMax: 0
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 567368027}
+          m_TargetAssemblyTypeName: BML.ScriptableObjectCore.Scripts.Managers.ScriptableObjectResetManager,
+            ScriptableObjectSystem
+          m_MethodName: ResetValues
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &812669833
 GameObject:
   m_ObjectHideFlags: 0
