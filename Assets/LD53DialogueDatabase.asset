@@ -513,7 +513,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 360
+        x: 361
         y: 108
         width: 160
         height: 30
@@ -1562,7 +1562,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Hell of a job out there Scout! I can see you'r cut out for the job
+        value: Hell of a job out there Scout! I can see you're cut out for the job
           from the performance alone. HOORAH!
         type: 0
         typeString: 
@@ -3646,7 +3646,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Loyal Employees! Thank you for making me all of this money! Now my
-          plans are complete, I can finally leave this foudl Earth and all of you
+          plans are complete, I can finally leave this foul Earth and all of you
           behind!
         type: 0
         typeString: 
