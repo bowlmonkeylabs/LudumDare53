@@ -2123,15 +2123,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611467098414523157, guid: da070b14cb16a194ca3f71e5dcf6c4fc, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
-      value: 0.4
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 4611467098414523157, guid: da070b14cb16a194ca3f71e5dcf6c4fc, type: 3}
       propertyPath: m_Colors.m_NormalColor.g
-      value: 0.4
+      value: 0.41568628
       objectReference: {fileID: 0}
     - target: {fileID: 4611467098414523157, guid: da070b14cb16a194ca3f71e5dcf6c4fc, type: 3}
       propertyPath: m_Colors.m_NormalColor.r
-      value: 0.4
+      value: 0.25490198
       objectReference: {fileID: 0}
     - target: {fileID: 4611467098414523157, guid: da070b14cb16a194ca3f71e5dcf6c4fc, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp

@@ -39,6 +39,7 @@ namespace Player
 
         private void OnEnable()
         {
+            UpdateCaffeineIndicator();
             _caffeineTimer.SubscribeFinished(DisableCaffeine);
             _caffeineCooldownTimer.SubscribeFinished(UpdateCaffeineIndicator);
         }
