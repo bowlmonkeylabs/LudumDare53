@@ -20,7 +20,7 @@ namespace BML.Scripts.UI
         }
         #endif
 
-        private void Awake()
+        private void Start()
         {
             UpdateText();
             _variable.Subscribe(UpdateText);
