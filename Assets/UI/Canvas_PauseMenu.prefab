@@ -2338,18 +2338,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1671986468699685845, guid: a4d0caf84488abc43adf750f6a138e4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671986468699685845, guid: a4d0caf84488abc43adf750f6a138e4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671986468699685845, guid: a4d0caf84488abc43adf750f6a138e4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5935695257611030555, guid: a4d0caf84488abc43adf750f6a138e4e, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
