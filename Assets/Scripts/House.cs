@@ -88,7 +88,10 @@ namespace DefaultNamespace
             _warningIndicator.gameObject.SetActive(warningVisible);
             if (warningVisible && urgentWarningVisible)
             {
-                _warningIndicatorUrgentFeedbacks.PlayFeedbacks();
+                if (!_warningIndicatorUrgentFeedbacks.IsPlaying)
+                {
+                    _warningIndicatorUrgentFeedbacks.PlayFeedbacks();
+                }
             }
             else
             {
